@@ -1,0 +1,15 @@
+--sort-files
+--color
+--group
+--follow
+
+--type-add=ruby=rake,haml
+--type-add=vim=vimrc
+--type-add=js=json
+--type-set=cucumber=feature
+--type-set=css=sass
+--type-set=MARKDOWN=md,mkd,markdown
+--type-set=RDOC=rdoc
+
+--ignore-dir=vendor/
+--ignore-dir=bin/
