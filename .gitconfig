@@ -1,0 +1,19 @@
+[user]
+  name = David Ratajczak
+  email = david@mockra.com
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --oneline --date=short --graph
+  type = cat-file -t
+  dump = cat-file -p
+  l = "!source ~/.githelpers && pretty_git_log"
+[color]
+  ui = true
+[core]
+  excludesfile = ~/.gitignore_global
+  editor = vim
+[log]
+  decorate = full
