@@ -41,7 +41,7 @@ set expandtab
 set hlsearch
 set list listchars=tab:»·,trail:·
 
-set textwidth=80
+set textwidth=79
 set colorcolumn=80
 set backspace=2
 set ignorecase smartcase
@@ -54,6 +54,7 @@ set wildmode=list:longest,list:full
 set complete=.,w,t
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*
 
+au FileType gitcommit set tw=72
 au BufRead,BufNewFile *.md,*.txt setlocal spell
 au BufNewFile,BufRead *.md,*.txt setlocal wrap
 au BufNewFile,BufRead *.md,*.txt setlocal lbr
