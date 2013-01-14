@@ -11,7 +11,5 @@ test -r ~/.shenv && . ~/.shenv
 
 export PATH=/Users/mockra/.rbenv/shims:${AWS_ELB_HOME}/bin:$EC2_HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 
-alias byword='open -a Byword'
-
 export NODE_PATH=/usr/local/lib/node_modules
 eval "$(rbenv init -)"
