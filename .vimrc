@@ -17,6 +17,7 @@ Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-surround'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'scrooloose/syntastic'
+Bundle 'kchmck/vim-coffee-script'
 Bundle 'VimClojure'
 
 filetype plugin indent on
