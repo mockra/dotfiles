@@ -14,11 +14,12 @@ Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-haml'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'nono/vim-handlebars'
+Bundle 'VimClojure'
 Bundle 'tpope/vim-surround'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'scrooloose/syntastic'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'VimClojure'
 
 filetype plugin indent on
 
