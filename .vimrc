@@ -3,6 +3,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'ervandew/supertab'
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-powerline'
