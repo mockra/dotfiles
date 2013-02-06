@@ -3,6 +3,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'ervandew/supertab'
+Bundle 'Lokaltog/vim-easymotion'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'mileszs/ack.vim'
@@ -75,6 +76,8 @@ map <leader>v :vsplit<cr>
 map <leader>z :vertical resize +40<cr>
 map <leader>x :vertical resize -40<cr>
 map <leader>a :A<cr>
+map <leader>w :w<cr>
+map <leader>d <C-w><C-w>
 
 autocmd BufReadPost *
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
