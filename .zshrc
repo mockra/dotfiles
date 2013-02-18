@@ -6,6 +6,7 @@ DEFAULT_USER='mockra'
 plugins=(git bundler brew gem osx rails3 thor)
 
 source $ZSH/oh-my-zsh.sh
+alias todo='todo.sh'
 
 test -r ~/.shenv && . ~/.shenv
 
