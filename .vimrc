@@ -63,6 +63,7 @@ au FileType gitcommit set tw=72
 au BufRead,BufNewFile *.md,*.txt setlocal spell
 au BufNewFile,BufRead *.md,*.txt setlocal wrap
 au BufNewFile,BufRead *.md,*.txt setlocal lbr
+au BufRead,BufNewFile *.pill setfiletype ruby
 
 let g:html_indent_tags = 'li\|p'
 let g:Powerline_symbols = 'fancy'
