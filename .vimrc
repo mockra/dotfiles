@@ -21,14 +21,15 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'nono/vim-handlebars'
 Bundle 'VimClojure'
 Bundle 'tpope/vim-surround'
-Bundle 'flazz/vim-colorschemes'
 Bundle 'scrooloose/syntastic'
 
 filetype plugin indent on
 
 syntax on
-colorscheme jellybeans
 set t_Co=256
+set bg=light
+set cursorline
+hi CursorLine term=bold cterm=bold
 
 set nocompatible
 set nobackup
@@ -50,7 +51,6 @@ set textwidth=79
 set colorcolumn=80
 set backspace=2
 set ignorecase smartcase
-set cursorline
 
 set number
 set numberwidth=5
