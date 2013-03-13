@@ -6,7 +6,7 @@
   ci = commit
   st = status
   br = branch
-  hist = log --oneline --date=short --graph
+  hist = log --format='%C(green)%h%Creset (%ar) %C(magenta)%an%Creset - %s%C(red)%d%Creset' --graph
   type = cat-file -t
   dump = cat-file -p
   l = "!source ~/.githelpers && pretty_git_log"
