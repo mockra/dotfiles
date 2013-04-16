@@ -11,7 +11,6 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-markdown'
@@ -21,7 +20,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'nono/vim-handlebars'
 Bundle 'VimClojure'
 Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/syntastic'
+Bundle 'mockra/vim-vroom'
 
 filetype plugin indent on
 
@@ -71,6 +70,8 @@ let g:Powerline_symbols = 'fancy'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
+let g:vroom_rspec_format = 'documentation'
+
 command! W w
 command! Q q
 map <leader>v :vsplit<cr>
@@ -102,43 +103,3 @@ function! MapCR()
 endfunction
 call MapCR()
 nnoremap <leader><leader> <c-^>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" RUNNING TESTS
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>t :call RunTestFile()<cr>
-
-function! RunTestFile(...)
-   if a:0
-       let command_suffix = a:1
-   else
-       let command_suffix = ""
-   endif
-
-   let in_test_file = match(expand("%"), '\(.feature\|_spec.rb\)$') != -1
-   if in_test_file
-       call SetTestFile()
-   elseif !exists("t:grb_test_file")
-       return
-   end
-   call RunTests(t:grb_test_file . command_suffix)
-endfunction
-
-function! SetTestFile()
-   let t:grb_test_file=@%
-endfunction
-
-function! RunTests(filename)
-   :w
-   if match(a:filename, '\.feature$') != -1
-       exec ":!script/features " . a:filename
-   else
-       if filereadable("script/test")
-           exec ":!script/test " . a:filename
-       elseif filereadable("Gemfile")
-           exec ":!bundle exec rspec --color --format doc " . a:filename
-       else
-           exec ":!rspec --color --format doc " . a:filename
-       end
-   end
-endfunction
