@@ -40,6 +40,5 @@ Thumbs.db
 # Bundler Gems #
 ################
 /vendor/bundle/
-/bin/
 
 notes.md
