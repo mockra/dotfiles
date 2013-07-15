@@ -1,6 +1,6 @@
 ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="agnoster"
+ZSH_THEME="cloud"
 DEFAULT_USER='mockra'
 
 plugins=(git bundler brew gem osx rails3 thor)
