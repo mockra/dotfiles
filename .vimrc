@@ -19,6 +19,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'nono/vim-handlebars'
 Bundle 'VimClojure'
 Bundle 'tpope/vim-surround'
+Bundle 'fsouza/go.vim'
 Bundle 'mockra/vim-vroom'
 
 filetype plugin indent on
@@ -46,7 +47,6 @@ set hlsearch
 set list listchars=tab:»·,trail:·
 
 set textwidth=79
-set colorcolumn=80
 set backspace=2
 set ignorecase smartcase
 
