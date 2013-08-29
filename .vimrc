@@ -20,6 +20,7 @@ Bundle 'nono/vim-handlebars'
 Bundle 'VimClojure'
 Bundle 'tpope/vim-surround'
 Bundle 'fsouza/go.vim'
+Bundle 'elixir-lang/vim-elixir'
 Bundle 'mockra/vim-vroom'
 
 filetype plugin indent on
