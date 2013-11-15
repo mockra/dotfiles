@@ -3,10 +3,11 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="cloud"
 DEFAULT_USER='mockra'
 
-plugins=(git bundler brew gem osx rails3 thor lein)
+plugins=(git brew)
 
 source $ZSH/oh-my-zsh.sh
 alias todo='todo.sh'
+alias bower='noglob bower'
 
 test -r ~/.shenv && . ~/.shenv
 
