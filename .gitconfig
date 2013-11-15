@@ -17,3 +17,5 @@
   editor = vim
 [log]
   decorate = full
+[push]
+	default = simple

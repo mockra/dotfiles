@@ -21,6 +21,7 @@ Bundle 'VimClojure'
 Bundle 'tpope/vim-surround'
 Bundle 'fsouza/go.vim'
 Bundle 'elixir-lang/vim-elixir'
+Bundle 'elzr/vim-json'
 Bundle 'mockra/vim-vroom'
 
 filetype plugin indent on
@@ -28,6 +29,7 @@ filetype plugin indent on
 syntax on
 set t_Co=256
 set bg=light
+set cc=80
 set cursorline
 hi CursorLine term=bold cterm=bold
 
@@ -80,6 +82,7 @@ map <leader>x :vertical resize -40<cr>
 map <leader>a :A<cr>
 map <leader>w :w<cr>
 map <leader>d <C-w><C-w>
+map <Leader>g :%s/\<<C-r><C-w>\>/
 
 autocmd BufReadPost *
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
