@@ -12,6 +12,9 @@
   l = "!source ~/.githelpers && pretty_git_log"
 [color]
   ui = true
+  branch = auto
+  diff = auto
+  status = auto
 [core]
   excludesfile = ~/.gitignore_global
   editor = vim

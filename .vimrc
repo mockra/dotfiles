@@ -74,8 +74,6 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 let g:vroom_rspec_format = 'documentation'
 
-command! W w
-command! Q q
 map <leader>v :vsplit<cr>
 map <leader>z :vertical resize +40<cr>
 map <leader>x :vertical resize -40<cr>
@@ -83,6 +81,12 @@ map <leader>a :A<cr>
 map <leader>w :w<cr>
 map <leader>d <C-w><C-w>
 map <Leader>g :%s/\<<C-r><C-w>\>/
+nmap :W :w
+nmap :W! :w!
+nmap :Q :q
+nmap :Q! :q!
+nmap :Wq! :wq!
+nmap :WQ! :wq!
 
 autocmd BufReadPost *
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
