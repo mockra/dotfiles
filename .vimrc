@@ -26,6 +26,10 @@ Bundle 'mockra/vim-vroom'
 
 filetype plugin indent on
 
+let g:ruby_path = '/Users/mockra/.rbenv/shims/ruby'
+
+set shell=/bin/bash
+
 syntax on
 set t_Co=256
 set bg=light

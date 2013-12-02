@@ -16,3 +16,6 @@ export PATH=/Users/mockra/.rbenv/shims:${AWS_ELB_HOME}/bin:$EC2_HOME/bin:/usr/lo
 
 export NODE_PATH=/usr/local/lib/node_modules
 eval "$(rbenv init -)"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
