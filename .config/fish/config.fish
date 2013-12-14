@@ -31,10 +31,7 @@ alias gup='git pull --rebase'
 . ~/.shenv
 
 set -x GOPATH /Users/mockra/dev/go
-set -x PATH /Users/mockra/.rbenv/shims:$AWS_ELB_HOME/bin:$EC2_HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$GOPATH/bin
-
+set -gx PATH /Users/mockra/.rbenv/shims $AWS_ELB_HOME/bin $EC2_HOME/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/X11/bin $GOPATH/bin $PATH
 set -x NODE_PATH /usr/local/lib/node_modules
 
-set PATH $HOME/.rbenv/bin $PATH
-set PATH $HOME/.rbenv/shims $PATH
 rbenv rehash >/dev/null ^&1
