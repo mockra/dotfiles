@@ -23,6 +23,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'fsouza/go.vim'
 Bundle 'elixir-lang/vim-elixir'
 Bundle 'elzr/vim-json'
+Bundle 'wavded/vim-stylus'
 Bundle 'mockra/vim-vroom'
 
 filetype plugin indent on

@@ -22,3 +22,5 @@
   decorate = full
 [push]
 	default = simple
+[github]
+	user = mockra
