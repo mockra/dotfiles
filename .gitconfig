@@ -6,6 +6,7 @@
   ci = commit
   st = status
   br = branch
+  ca = commit --amend
   hist = log --format='%C(green)%h%Creset (%ar) %C(magenta)%an%Creset - %s%C(red)%d%Creset' --graph
   type = cat-file -t
   dump = cat-file -p
@@ -21,6 +22,8 @@
 [log]
   decorate = full
 [push]
-	default = simple
+  default = simple
 [github]
-	user = mockra
+  user = mockra
+[merge]
+  ff = only
