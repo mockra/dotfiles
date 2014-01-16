@@ -80,6 +80,7 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 let g:vroom_rspec_format = 'documentation'
 
+map <Leader>bi :!bundle install<cr>
 map <leader>v :vsplit<cr>
 map <leader>z :vertical resize +40<cr>
 map <leader>x :vertical resize -40<cr>
@@ -93,6 +94,8 @@ nmap :Q :q
 nmap :Q! :q!
 nmap :Wq! :wq!
 nmap :WQ! :wq!
+
+command -nargs=1 E execute('silent! !mkdir -p "$(dirname "<args>")"') <Bar> e <args>
 
 autocmd BufReadPost *
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
