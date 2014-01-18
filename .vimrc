@@ -25,6 +25,7 @@ Bundle 'elixir-lang/vim-elixir'
 Bundle 'elzr/vim-json'
 Bundle 'wavded/vim-stylus'
 Bundle 'mockra/vim-vroom'
+Bundle 'dockyard/vim-easydir'
 
 filetype plugin indent on
 
@@ -94,8 +95,6 @@ nmap :Q :q
 nmap :Q! :q!
 nmap :Wq! :wq!
 nmap :WQ! :wq!
-
-command -nargs=1 E execute('silent! !mkdir -p "$(dirname "<args>")"') <Bar> e <args>
 
 autocmd BufReadPost *
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
