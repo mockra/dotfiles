@@ -26,6 +26,7 @@ Bundle 'elzr/vim-json'
 Bundle 'wavded/vim-stylus'
 Bundle 'mockra/vim-vroom'
 Bundle 'dockyard/vim-easydir'
+Bundle 'tpope/vim-git'
 
 filetype plugin indent on
 
@@ -90,6 +91,7 @@ map <leader>w :w<cr>
 map <leader>d <C-w><C-w>
 map <Leader>g :%s/\<<C-r><C-w>\>/
 map <leader>p :silent !open -a Marked.app '%:p'<cr>
+map <leader>D :call delete(expand('%')) \| bdelete!<cr>
 nmap :W :w
 nmap :W! :w!
 nmap :Q :q
