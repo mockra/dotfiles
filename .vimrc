@@ -66,7 +66,7 @@ set numberwidth=5
 
 set wildmode=list:longest,list:full
 set complete=.,w,t
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*/node_modules/*
 
 au FileType gitcommit set tw=72
 au BufRead,BufNewFile *.md,*.txt setlocal spell
