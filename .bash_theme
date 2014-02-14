@@ -1,0 +1,40 @@
+RED='\e[1;31m'
+GREEN='\e[1;32m'
+BLUE='\e[1;34m'
+NC='\e[0m'
+
+function _git_prompt() {
+  local git_status="`git status -unormal 2>&1`"
+  if ! [[ "$git_status" =~ Not\ a\ git\ repo ]]; then
+    if [[ "$git_status" =~ nothing\ to\ commit ]]; then
+      local ansi=$GREEN
+    elif [[ "$git_status" =~ nothing\ added\ to\ commit\ but\ untracked\ files\ present ]]; then
+      local ansi=$RED
+    else
+      local ansi=$BLUE
+    fi
+    if [[ "$git_status" =~ On\ branch\ ([^[:space:]]+) ]]; then
+      branch=${BASH_REMATCH[1]}
+    else
+      branch="(`git describe --all --contains --abbrev=4 HEAD 2> /dev/null ||
+      echo HEAD`)"
+    fi
+    echo -n '[\['"$ansi"'\]'"$branch"'\[\e[0m\]]'
+  fi
+}
+
+function report_status() {
+  RET_CODE=$?
+  if [[ $RET_CODE -ne 0 ]] ; then
+    echo -ne "[\[$RED\]$RET_CODE\[$NC\]]"
+  fi
+}
+
+export _PS1="\[$NC\][\W]"
+export PS2="\[$NC\]> "
+export PROMPT_COMMAND='_status=$(report_status);export PS1="$(_git_prompt)${_status}${_PS1}\$ ";unset _status;'
+
+export TERM=xterm-color
+export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
