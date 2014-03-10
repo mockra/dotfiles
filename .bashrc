@@ -9,6 +9,7 @@ alias gc="g commit -v"
 alias gp="g push"
 alias gb="g branch"
 alias gup='git pull --rebase'
+alias bi='bundle install'
 
 source ~/.shenv
 source ~/.bash_theme
@@ -17,6 +18,4 @@ GOPATH=/Users/mockra/dev/go
 PATH=$AWS_ELB_HOME/bin:$EC2_HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$GOPATH/bin:$PATH
 NODE_PATH=/usr/local/lib/node_modules
 
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
-chruby ruby-2.1
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
