@@ -16,8 +16,8 @@ source ~/.bash_theme
 
 HISTSIZE=50000
 
-GOPATH=/Users/mockra/dev/go
-PATH=$AWS_ELB_HOME/bin:$EC2_HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$GOPATH/bin:$PATH
-NODE_PATH=/usr/local/lib/node_modules
+export GOPATH=$HOME/dev/go
+export PATH=$AWS_ELB_HOME/bin:$EC2_HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$GOPATH/bin:$PATH
+export NODE_PATH=/usr/local/lib/node_modules
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
