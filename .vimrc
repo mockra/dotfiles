@@ -29,6 +29,7 @@ Bundle 'mockra/vim-vroom'
 Bundle 'dockyard/vim-easydir'
 Bundle 'tpope/vim-git'
 Bundle 'scrooloose/syntastic'
+Bundle 'bling/vim-airline'
 
 filetype plugin indent on
 
