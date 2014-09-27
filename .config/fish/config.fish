@@ -22,12 +22,14 @@ alias gd='g diff'
 alias v='vim'
 alias be='bundle exec'
 alias gA="g add -A"
+alias gap="g add -A --patch"
 alias ga="g add"
 alias gc="g commit -v"
 alias gp="g push"
 alias gb="g branch"
 alias gup='git pull --rebase'
 alias bi='bundle install'
+alias bu='bundle update'
 
 . ~/.shenv
 
