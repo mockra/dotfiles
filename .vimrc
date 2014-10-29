@@ -96,7 +96,8 @@ map <leader>a :A<cr>
 map <leader>w :w<cr>
 map <leader>d <C-w><C-w>
 map <Leader>g :%s/\<<C-r><C-w>\>/
-map <leader>p :silent !open -a Marked.app '%:p'<cr>
+map <leader>P :silent !open -a Marked.app '%:p'<cr>
+map <leader>p :r !pbpaste<cr>
 map <leader>D :call delete(expand('%')) \| bdelete!<cr>
 map <Leader>s :SyntasticCheck<cr>
 nmap :W :w
