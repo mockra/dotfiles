@@ -30,6 +30,7 @@ Bundle 'dockyard/vim-easydir'
 Bundle 'tpope/vim-git'
 Bundle 'scrooloose/syntastic'
 Bundle 'bling/vim-airline'
+Bundle 'editorconfig/editorconfig-vim'
 
 filetype plugin indent on
 
