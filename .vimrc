@@ -31,6 +31,7 @@ Bundle 'tpope/vim-git'
 Bundle 'scrooloose/syntastic'
 Bundle 'bling/vim-airline'
 Bundle 'editorconfig/editorconfig-vim'
+Bundle 'moll/vim-node'
 
 filetype plugin indent on
 
