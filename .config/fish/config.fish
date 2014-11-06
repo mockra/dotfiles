@@ -18,6 +18,7 @@ set fish_plugins rbenv bundler node rails brew localhost gi
 
 alias g='git'
 alias gst='g status'
+alias gpu='git push -u origin HEAD'
 alias gd='g diff'
 alias v='vim'
 alias be='bundle exec'
