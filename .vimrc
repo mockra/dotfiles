@@ -40,8 +40,6 @@ let g:ruby_path = '/Users/mockra/.rbenv/shims/ruby'
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 let g:syntastic_mode_map = { "mode": "passive" }
 
-set shell=/bin/bash
-
 syntax on
 set t_Co=256
 set bg=light
