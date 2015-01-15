@@ -33,6 +33,8 @@ Bundle 'bling/vim-airline'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'moll/vim-node'
 
+set nocompatible
+
 filetype plugin indent on
 
 let g:ruby_path = '/Users/mockra/.rbenv/shims/ruby'
@@ -47,7 +49,6 @@ set cc=80
 set cursorline
 hi CursorLine term=bold cterm=bold
 
-set nocompatible
 set nobackup
 set nowritebackup
 set noswapfile
