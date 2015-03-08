@@ -16,6 +16,11 @@ set fish_plugins rbenv bundler node rails brew localhost gi
 # Load oh-my-fish configuration.
 . $fish_path/oh-my-fish.fish
 
+function fish_title
+  git rev-parse --abbrev-ref HEAD
+end
+funcsave fish_title
+
 alias g='git'
 alias gst='g status'
 alias gpu='git push -u origin HEAD'
