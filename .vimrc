@@ -1,5 +1,8 @@
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 Bundle 'gmarik/vundle'
 
 Bundle 'ervandew/supertab'
@@ -33,9 +36,8 @@ Bundle 'bling/vim-airline'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'moll/vim-node'
 
-set nocompatible
-
-filetype plugin indent on
+call vundle#end()
+filetype plugin indent on 
 
 let g:ruby_path = '/Users/mockra/.rbenv/shims/ruby'
 
