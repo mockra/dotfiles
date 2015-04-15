@@ -42,5 +42,6 @@ alias bu='bundle update'
 set -x GOPATH /Users/mockra/dev/go
 set -gx PATH /Users/mockra/.rbenv/shims $AWS_ELB_HOME/bin $EC2_HOME/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/X11/bin $GOPATH/bin $PATH
 set -x NODE_PATH /usr/local/lib/node_modules
+set -x ANDROID_HOME=/usr/local/opt/android-sdk
 
 rbenv rehash >/dev/null ^&1
