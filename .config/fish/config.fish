@@ -1,3 +1,7 @@
+set -g OMF_PATH $HOME/.local/share/omf
+set -g OMF_CONFIG $HOME/.config/omf
+source $OMF_PATH/init.fish
+
 set -g fish_greeting ''
 # Path to your oh-my-fish.
 set fish_path $HOME/.oh-my-fish
