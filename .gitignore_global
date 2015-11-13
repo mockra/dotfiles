@@ -40,4 +40,8 @@ Thumbs.db
 ################
 /vendor/bundle/
 
+# NPM #
+#######
+/node_modules/
+
 notes.md
