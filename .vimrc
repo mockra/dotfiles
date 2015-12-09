@@ -29,7 +29,6 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'elzr/vim-json'
 Plugin 'wavded/vim-stylus'
 Plugin 'groenewege/vim-less'
-Plugin 'mockra/vim-vroom'
 Plugin 'dockyard/vim-easydir'
 Plugin 'tpope/vim-git'
 Plugin 'scrooloose/syntastic'
@@ -38,6 +37,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'moll/vim-node'
 Plugin 'othree/yajs.vim'
 Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'janko-m/vim-test'
 
 call vundle#end()
 filetype plugin indent on 
@@ -91,8 +91,6 @@ let g:Powerline_symbols = 'fancy'
 
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-
-let g:vroom_rspec_format = 'documentation'
 
 map <Leader>bi :!bundle install<cr>
 map <leader>v :vsplit<cr>
