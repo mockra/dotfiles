@@ -45,6 +45,7 @@ filetype plugin indent on
 let g:ruby_path = '/Users/mockra/.rbenv/shims/ruby'
 
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+let g:syntastic_javascript_checkers = ['standard']
 let g:syntastic_mode_map = { "mode": "passive" }
 
 syntax on
