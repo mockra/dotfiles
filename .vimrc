@@ -45,6 +45,8 @@ let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 let g:syntastic_javascript_checkers = ['standard']
 let g:syntastic_mode_map = { "mode": "passive" }
 
+let test#javascript#mocha#options = '-A --compilers js:babel-register'
+
 syntax on
 set t_Co=256
 set bg=light
