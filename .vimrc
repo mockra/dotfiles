@@ -32,7 +32,7 @@ Plugin 'tpope/vim-git'
 Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'othree/yajs.vim'
+Plugin 'pangloss/vim-javascript'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'janko-m/vim-test'
 
