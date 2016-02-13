@@ -92,18 +92,19 @@ let g:Powerline_symbols = 'fancy'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
-map <Leader>bi :!bundle install<cr>
+map <leader>bi :!bundle install<cr>
 map <leader>v :vsplit<cr>
+map <leader>f :Ag<cr>
 map <leader>z :vertical resize +40<cr>
 map <leader>x :vertical resize -40<cr>
 map <leader>a :A<cr>
 map <leader>w :w<cr>
 map <leader>d <C-w><C-w>
-map <Leader>g :%s/\<<C-r><C-w>\>/
+map <leader>g :%s/\<<C-r><C-w>\>/
 map <leader>P :silent !open -a Marked.app '%:p'<cr>
 map <leader>p :r !pbpaste<cr>
 map <leader>D :call delete(expand('%')) \| bdelete!<cr>
-map <Leader>s :SyntasticCheck<cr>
+map <leader>s :SyntasticCheck<cr>
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
 nmap :W :w
