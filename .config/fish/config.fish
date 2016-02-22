@@ -49,3 +49,5 @@ set -x NODE_PATH /usr/local/lib/node_modules
 set -x ANDROID_HOME=/usr/local/opt/android-sdk
 
 rbenv rehash >/dev/null ^&1
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
