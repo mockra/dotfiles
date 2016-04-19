@@ -54,6 +54,7 @@ set bg=light
 set cc=80
 set cursorline
 hi CursorLine term=bold cterm=bold
+hi MatchParen cterm=bold
 
 set nobackup
 set nowritebackup
@@ -69,6 +70,7 @@ set smarttab
 set expandtab
 set hlsearch
 set list listchars=tab:»·,trail:·
+set lazyredraw
 
 set textwidth=79
 set backspace=2
@@ -107,6 +109,7 @@ map <leader>P :silent !open -a Marked.app '%:p'<cr>
 map <leader>p :r !pbpaste<cr>
 map <leader>D :call delete(expand('%')) \| bdelete!<cr>
 map <leader>s :SyntasticCheck<cr>
+
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
 nmap :W :w
