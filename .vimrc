@@ -71,6 +71,7 @@ set expandtab
 set hlsearch
 set list listchars=tab:»·,trail:·
 set lazyredraw
+set nowrap
 
 set textwidth=79
 set backspace=2
@@ -88,6 +89,7 @@ au BufRead,BufNewFile *.md,*.txt setlocal spell
 au BufNewFile,BufRead *.md,*.txt setlocal wrap
 au BufNewFile,BufRead *.md,*.txt setlocal lbr
 au BufRead,BufNewFile *.pill setfiletype ruby
+au FileType qf setlocal wrap linebreak
 
 let g:html_indent_tags = 'li\|p'
 let g:Powerline_symbols = 'fancy'
