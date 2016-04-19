@@ -116,6 +116,9 @@ nmap :Q! :q!
 nmap :Wq! :wq!
 nmap :WQ! :wq!
 
+imap <c-e> <c-o>$
+imap <c-a> <c-o>^
+
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 autocmd BufReadPost *
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
