@@ -71,7 +71,6 @@ set expandtab
 set hlsearch
 set list listchars=tab:»·,trail:·
 set lazyredraw
-set nowrap
 
 set textwidth=79
 set backspace=2
@@ -95,8 +94,10 @@ let g:html_indent_tags = 'li\|p'
 let g:Powerline_symbols = 'fancy'
 
 let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-let g:ctrlp_use_caching = 0
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp|node_modules$',
+  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+  \ }
 
 map <leader>bi :!bundle install<cr>
 map <leader>v :vsplit<cr>
