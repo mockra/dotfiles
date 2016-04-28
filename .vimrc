@@ -15,12 +15,9 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-haml'
 Plugin 'digitaltoad/vim-jade'
-Plugin 'slim-template/vim-slim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'nono/vim-handlebars'
-Plugin 'VimClojure'
 Plugin 'tpope/vim-surround'
 Plugin 'fsouza/go.vim'
 Plugin 'elixir-lang/vim-elixir'
@@ -29,7 +26,6 @@ Plugin 'wavded/vim-stylus'
 Plugin 'groenewege/vim-less'
 Plugin 'dockyard/vim-easydir'
 Plugin 'tpope/vim-git'
-Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'editorconfig/editorconfig-vim'
@@ -38,13 +34,9 @@ Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'janko-m/vim-test'
 
 call vundle#end()
-filetype plugin indent on 
+filetype plugin indent on
 
 let g:ruby_path = '/Users/mockra/.rbenv/shims/ruby'
-
-let g:syntastic_ruby_checkers = ['mri', 'rubocop']
-let g:syntastic_javascript_checkers = ['standard']
-let g:syntastic_mode_map = { "mode": "passive" }
 
 let test#javascript#mocha#options = '-A --compilers js:babel-register'
 
@@ -108,7 +100,6 @@ map <leader>a :A<cr>
 map <leader>w :w<cr>
 map <leader>d <C-w><C-w>
 map <leader>g :%s/\<<C-r><C-w>\>/
-map <leader>P :silent !open -a Marked.app '%:p'<cr>
 map <leader>p :r !pbpaste<cr>
 map <leader>D :call delete(expand('%')) \| bdelete!<cr>
 map <leader>s :SyntasticCheck<cr>
