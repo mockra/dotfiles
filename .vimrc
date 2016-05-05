@@ -39,6 +39,7 @@ filetype plugin indent on
 let g:ruby_path = '/Users/mockra/.rbenv/shims/ruby'
 
 let test#javascript#mocha#options = '-A --compilers js:babel-register'
+let test#strategy = "neovim"
 
 syntax on
 set t_Co=256
