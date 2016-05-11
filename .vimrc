@@ -49,7 +49,6 @@ set cursorline
 hi CursorLine term=bold cterm=bold
 hi MatchParen cterm=bold
 
-set mouse=
 set nobackup
 set nowritebackup
 set noswapfile
