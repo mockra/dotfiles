@@ -43,6 +43,8 @@ let g:ruby_path = '/Users/mockra/.rbenv/shims/ruby'
 let test#javascript#mocha#options = '-A --compilers js:babel-register'
 let test#strategy = "neovim"
 
+let g:ctrlp_reuse_window = 'startify'
+
 syntax on
 set t_Co=256
 set bg=light
