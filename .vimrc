@@ -6,10 +6,11 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'mhinz/vim-startify'
 Plugin 'ervandew/supertab'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'rking/ag.vim'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-fugitive'
@@ -32,6 +33,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'janko-m/vim-test'
+Plugin 'ryanoasis/vim-devicons'
 
 call vundle#end()
 filetype plugin indent on
@@ -64,6 +66,7 @@ set expandtab
 set hlsearch
 set list listchars=tab:»·,trail:·
 set lazyredraw
+set encoding=utf8
 
 set textwidth=79
 set backspace=2
@@ -85,6 +88,7 @@ au FileType qf setlocal wrap linebreak
 
 let g:html_indent_tags = 'li\|p'
 let g:Powerline_symbols = 'fancy'
+let g:airline_powerline_fonts = 1
 
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = {
