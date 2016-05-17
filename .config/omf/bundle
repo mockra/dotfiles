@@ -1,2 +1,5 @@
+package brew
+package grc
+package rbenv
 theme default
 theme nai
