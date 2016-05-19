@@ -110,6 +110,8 @@ map <leader>g :%s/\<<C-r><C-w>\>/
 map <leader>p :r !pbpaste<cr>
 map <leader>D :call delete(expand('%')) \| bdelete!<cr>
 map <leader>s :SyntasticCheck<cr>
+map <leader>y "*y<cr>
+nnoremap <leader>yf :let @*=expand("%")<CR>
 
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
