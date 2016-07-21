@@ -1,4 +1,6 @@
 set shell=bash
+scriptencoding utf-8
+set encoding=utf-8
 set nocompatible
 filetype off
 
@@ -68,7 +70,6 @@ set expandtab
 set hlsearch
 set list listchars=tab:»·,trail:·
 set lazyredraw
-set encoding=utf8
 
 set textwidth=79
 set backspace=2
