@@ -8,7 +8,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'mhinz/vim-startify'
 Plugin 'ervandew/supertab'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'rking/ag.vim'
@@ -29,13 +28,10 @@ Plugin 'wavded/vim-stylus'
 Plugin 'groenewege/vim-less'
 Plugin 'dockyard/vim-easydir'
 Plugin 'tpope/vim-git'
-Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'janko-m/vim-test'
-Plugin 'ryanoasis/vim-devicons'
 
 call vundle#end()
 filetype plugin indent on
@@ -50,7 +46,8 @@ let g:ctrlp_reuse_window = 'startify'
 syntax on
 set t_Co=256
 set bg=light
-set cc=80
+set cc=+1
+hi ColorColumn ctermbg=lightgrey
 set cursorline
 hi CursorLine term=bold cterm=bold
 hi MatchParen cterm=bold
