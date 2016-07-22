@@ -32,3 +32,4 @@ set -x NODE_PATH /usr/local/lib/node_modules
 rbenv rehash >/dev/null ^&1
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+test -s {$HOME}/.kiex/scripts/kiex.fish ; and source {$HOME}/.kiex/scripts/kiex.fish
