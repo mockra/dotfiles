@@ -25,8 +25,7 @@ alias bu='bundle update'
 
 . ~/.shenv
 
-set -x GOPATH $HOME/dev/go
-set -gx PATH $HOME/.rbenv/shims $AWS_ELB_HOME/bin $EC2_HOME/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/X11/bin $GOPATH/bin $PATH
+set -gx PATH $HOME/.rbenv/shims /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/X11/bin $PATH
 set -x NODE_PATH /usr/local/lib/node_modules
 
 rbenv rehash >/dev/null ^&1
