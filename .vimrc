@@ -92,7 +92,7 @@ let g:airline_powerline_fonts = 1
 
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn|yardoc)|bower_components|public|node_modules|_build|tmp|log|deps$',
+  \ 'dir':  '\v[\/]\.(git|hg|svn|yardoc)|bower_components|public|node_modules|_build|tmp|log|deps|priv\/static$',
   \ 'file': '\v\.(exe|so|dll|dat|DS_Store)$'
   \ }
 
