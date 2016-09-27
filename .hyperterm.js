@@ -58,7 +58,7 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: ['hypercwd',
-    'hyperterm-atom-dark',
+    'nova-hyperterm',
     'hyperterm-tab-icons'],
 
   // in development, you can create a directory under
