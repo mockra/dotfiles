@@ -25,7 +25,7 @@ alias bu='bundle update'
 
 . ~/.shenv
 
-set -gx PATH $HOME/.rbenv/shims /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/X11/bin $PATH
+set -gx PATH $HOME/.rbenv/shims /usr/local/bin /usr/bin /bin /usr/sbin /sbin $PATH
 set -x NODE_PATH /usr/local/lib/node_modules
 
 rbenv rehash >/dev/null ^&1
