@@ -8,6 +8,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'trevordmiller/nova-vim'
+
 Plugin 'ervandew/supertab'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'rking/ag.vim'
@@ -31,6 +33,7 @@ Plugin 'elzr/vim-json'
 Plugin 'wavded/vim-stylus'
 Plugin 'groenewege/vim-less'
 Plugin 'pangloss/vim-javascript'
+Plugin 'vim-ruby/vim-ruby'
 
 Plugin 'tpope/vim-surround'
 Plugin 'dockyard/vim-easydir'
@@ -48,14 +51,11 @@ let test#javascript#mocha#options = '-A --compilers js:babel-register'
 
 let g:ctrlp_reuse_window = 'startify'
 
+colorscheme nova
 syntax on
 set t_Co=256
-set bg=light
 set cc=+1
-hi ColorColumn ctermbg=lightgrey
 set cursorline
-hi CursorLine term=bold cterm=bold
-hi MatchParen cterm=bold
 
 set nobackup
 set nowritebackup
