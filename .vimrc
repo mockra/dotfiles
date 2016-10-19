@@ -96,6 +96,11 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn|yardoc)|bower_components|public|node_modules|_build|tmp|log|deps|priv\/static$',
   \ 'file': '\v\.(exe|so|dll|dat|DS_Store)$'
   \ }
+if executable('ag')
+  set grepprg=ag\ --nogroup\ --nocolor
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_use_caching = 0
+endif
 
 map <leader>bi :!bundle install<cr>
 map <leader>v :vsplit<cr>
