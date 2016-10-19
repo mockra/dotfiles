@@ -2,48 +2,44 @@ set shell=bash
 scriptencoding utf-8
 set encoding=utf-8
 set nocompatible
-filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-
-Plugin 'trevordmiller/nova-vim'
-
-Plugin 'ervandew/supertab'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'rking/ag.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
-
-Plugin 'tpope/vim-rake'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-endwise'
-
-Plugin 'tpope/vim-markdown'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'othree/html5.vim'
-Plugin 'mxw/vim-jsx'
-Plugin 'hail2u/vim-css3-syntax'
-Plugin 'nono/vim-handlebars'
-Plugin 'fsouza/go.vim'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'elzr/vim-json'
-Plugin 'wavded/vim-stylus'
-Plugin 'groenewege/vim-less'
-Plugin 'pangloss/vim-javascript'
-Plugin 'vim-ruby/vim-ruby'
-
-Plugin 'tpope/vim-surround'
-Plugin 'dockyard/vim-easydir'
-Plugin 'tpope/vim-git'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'janko-m/vim-test'
-
-call vundle#end()
 filetype plugin indent on
+
+call plug#begin('~/.vim/plugged')
+Plug 'trevordmiller/nova-vim'
+
+Plug 'ervandew/supertab'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'rking/ag.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+
+Plug 'tpope/vim-rake'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-endwise'
+
+Plug 'tpope/vim-markdown'
+Plug 'digitaltoad/vim-jade'
+Plug 'kchmck/vim-coffee-script'
+Plug 'othree/html5.vim'
+Plug 'mxw/vim-jsx'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'nono/vim-handlebars'
+Plug 'fsouza/go.vim'
+Plug 'elixir-lang/vim-elixir'
+Plug 'elzr/vim-json'
+Plug 'wavded/vim-stylus'
+Plug 'groenewege/vim-less'
+Plug 'pangloss/vim-javascript'
+Plug 'vim-ruby/vim-ruby'
+
+Plug 'tpope/vim-surround'
+Plug 'dockyard/vim-easydir'
+Plug 'tpope/vim-git'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'janko-m/vim-test'
+
+call plug#end()
 
 let g:ruby_path = '/Users/mockra/.rbenv/shims/ruby'
 
@@ -116,8 +112,8 @@ map <leader>s :%sort<cr>
 map <leader>y "*y<cr>
 nnoremap <leader>yf :let @*=expand("%")<CR>
 
-nmap <silent> <leader>t :TestNearest<CR>
-nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>t :w \| :TestNearest<CR>
+nmap <silent> <leader>T :w \| :TestFile<CR>
 nmap :W :w
 nmap :W! :w!
 nmap :Q :q
