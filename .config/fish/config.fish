@@ -17,7 +17,7 @@ alias gup='g pull --rebase'
 alias gst='g status'
 alias gpu='g push -u origin HEAD'
 
-alias v='nvim'
+alias v='vim'
 
 alias be='bundle exec'
 alias bi='bundle install'
