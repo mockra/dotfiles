@@ -102,6 +102,13 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+"# for William
+inoremap dk <esc>
+map <space> :w<cr>
+map , <leader>
+nmap s <Plug>(easymotion-bd-f)
+omap s <Plug>(easymotion-bd-f)
+
 map <leader>bi :!bundle install<cr>
 map <leader>v :vsplit<cr>
 map <leader>f :Ag<cr>

@@ -3,7 +3,7 @@ module.exports = {
     shell: "/usr/local/bin/fish",
 
     // default font size in pixels for all tabs
-    fontSize: 12,
+    fontSize: 20,
 
     // font family with optional fallbacks
     fontFamily: '"Noto Mono", Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
