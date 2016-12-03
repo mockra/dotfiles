@@ -11,41 +11,29 @@ Plug 'ervandew/supertab'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'rking/ag.vim'
 Plug 'ctrlpvim/ctrlp.vim'
-
-Plug 'tpope/vim-rake'
-Plug 'tpope/vim-rails'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-endwise'
-
-Plug 'tpope/vim-markdown'
-Plug 'digitaltoad/vim-jade'
-Plug 'kchmck/vim-coffee-script'
-Plug 'othree/html5.vim'
-Plug 'mxw/vim-jsx'
-Plug 'hail2u/vim-css3-syntax'
-Plug 'nono/vim-handlebars'
-Plug 'fsouza/go.vim'
-Plug 'elixir-lang/vim-elixir'
-Plug 'elzr/vim-json'
-Plug 'wavded/vim-stylus'
-Plug 'groenewege/vim-less'
-Plug 'pangloss/vim-javascript'
-Plug 'vim-ruby/vim-ruby'
-
+Plug 'vim-endwise'
 Plug 'tpope/vim-surround'
 Plug 'dockyard/vim-easydir'
-Plug 'tpope/vim-git'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'cakebaker/scss-syntax.vim'
+
+Plug 'tpope/vim-rails'
+Plug 'c-brenn/phoenix.vim'
+Plug 'tpope/vim-projectionist'
 Plug 'janko-m/vim-test'
 
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-git'
+
+Plug 'ludovicchabant/vim-gutentags'
+
+Plug 'neomake/neomake'
 call plug#end()
 
+autocmd! BufWritePost * Neomake
+
 let g:ruby_path = '/Users/mockra/.rbenv/shims/ruby'
-
 let test#javascript#mocha#options = '-A --compilers js:babel-register'
-
-let g:ctrlp_reuse_window = 'startify'
+let g:gutentags_cache_dir = '~/.tags_cache'
 
 colorscheme nova
 syntax on
