@@ -12,7 +12,7 @@ Plug 'Lokaltog/vim-easymotion'
 Plug 'rking/ag.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'vim-endwise'
+Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
 Plug 'dockyard/vim-easydir'
 
