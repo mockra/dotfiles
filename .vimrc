@@ -25,11 +25,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-git'
 
 Plug 'ludovicchabant/vim-gutentags'
-
-Plug 'neomake/neomake'
 call plug#end()
-
-autocmd! BufWritePost * Neomake
 
 let g:ruby_path = '/Users/mockra/.rbenv/shims/ruby'
 let test#javascript#mocha#options = '-A --compilers js:babel-register'
