@@ -52,6 +52,7 @@ set expandtab
 set hlsearch
 set list listchars=tab:»·,trail:·
 set lazyredraw
+set relativenumber
 
 set textwidth=79
 set backspace=2
