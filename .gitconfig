@@ -12,6 +12,8 @@
   hist = log --format='%C(green)%h%Creset (%ar) %C(magenta)%an%Creset - %s%C(red)%d%Creset' --graph
   pf = push --force-with-lease
   pu = push -u origin HEAD
+  rbm = rebase -i origin/master
+  rbc = rebase --continue
 [color]
   ui = true
   branch = auto
