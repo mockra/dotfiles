@@ -28,6 +28,8 @@ Plug 'ludovicchabant/vim-gutentags'
 call plug#end()
 
 let g:ruby_path = '/Users/mockra/.rbenv/shims/ruby'
+let g:ruby_indent_access_modifier_style = 'outdent'
+
 let test#javascript#mocha#options = '-A --compilers js:babel-register'
 let g:gutentags_cache_dir = '~/.tags_cache'
 
