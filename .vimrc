@@ -20,6 +20,7 @@ Plug 'tpope/vim-rails'
 Plug 'c-brenn/phoenix.vim'
 Plug 'tpope/vim-projectionist'
 Plug 'janko-m/vim-test'
+Plug 'bswinnerton/vim-test-github'
 
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-git'
@@ -32,6 +33,8 @@ let g:ruby_indent_access_modifier_style = 'outdent'
 
 let test#javascript#mocha#options = '-A --compilers js:babel-register'
 let g:gutentags_cache_dir = '~/.tags_cache'
+
+let test#runners = {'Ruby': ['GitHub']}
 
 colorscheme nova
 syntax on
