@@ -92,10 +92,7 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
-"# for William
-inoremap dk <esc>
 map <space> :w<cr>
-map , <leader>
 nmap s <Plug>(easymotion-bd-f)
 omap s <Plug>(easymotion-bd-f)
 
@@ -122,6 +119,9 @@ nmap :Q :q
 nmap :Q! :q!
 nmap :Wq! :wq!
 nmap :WQ! :wq!
+
+nnoremap <silent> go :CtrlP<CR>
+nnoremap <silent> gr :CtrlPMRU<CR>
 
 imap <c-e> <c-o>$
 imap <c-a> <c-o>^
