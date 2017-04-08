@@ -92,9 +92,7 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
-map <space> :w<cr>
-nmap s <Plug>(easymotion-bd-f)
-omap s <Plug>(easymotion-bd-f)
+nmap s <Plug>(easymotion-overwin-f)
 
 map <leader>bi :!bundle install<cr>
 map <leader>v :vsplit<cr>
