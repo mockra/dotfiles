@@ -19,6 +19,10 @@ Plug 'dockyard/vim-easydir'
 Plug 'tpope/vim-rails'
 Plug 'c-brenn/phoenix.vim'
 Plug 'tpope/vim-projectionist'
+
+Plug 'jgdavey/tslime.vim'
+Plug 'christoomey/vim-tmux-navigator'
+
 Plug 'janko-m/vim-test'
 Plug 'bswinnerton/vim-test-github'
 
@@ -35,6 +39,7 @@ let test#javascript#mocha#options = '-A --compilers js:babel-register'
 let g:gutentags_cache_dir = '~/.tags_cache'
 
 let test#runners = {'Ruby': ['GitHub']}
+let test#strategy = "tslime"
 
 colorscheme nova
 syntax on
@@ -118,11 +123,6 @@ nmap :Q :q
 nmap :Q! :q!
 nmap :Wq! :wq!
 nmap :WQ! :wq!
-
-nnoremap gl <C-W><C-L>
-nnoremap gh <C-W><C-H>
-nnoremap gj <C-W><C-J>
-nnoremap gk <C-W><C-K>
 
 nnoremap <silent> go :CtrlP<CR>
 nnoremap <silent> gr :CtrlPMRU<CR>
