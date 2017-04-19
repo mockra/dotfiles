@@ -15,6 +15,8 @@ alias be='bundle exec'
 alias bi='bundle install'
 alias bu='bundle update'
 
+alias ls='exa'
+
 . ~/.shenv
 
 set -gx PATH $HOME/.rbenv/shims /usr/local/bin /usr/bin /bin /usr/sbin /sbin $PATH
