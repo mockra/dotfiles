@@ -20,7 +20,7 @@ Plug 'tpope/vim-rails'
 Plug 'c-brenn/phoenix.vim'
 Plug 'tpope/vim-projectionist'
 
-Plug 'jgdavey/tslime.vim'
+Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'janko-m/vim-test'
@@ -39,7 +39,7 @@ let test#javascript#mocha#options = '-A --compilers js:babel-register'
 let g:gutentags_cache_dir = '~/.tags_cache'
 
 let test#runners = {'Ruby': ['GitHub']}
-let test#strategy = "tslime"
+let test#strategy = "vimux"
 
 colorscheme nova
 syntax on
