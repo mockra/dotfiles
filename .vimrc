@@ -103,11 +103,8 @@ nmap s <Plug>(easymotion-overwin-f)
 map <leader>bi :!bundle install<cr>
 map <leader>v :vsplit<cr>
 map <leader>f :Ag<cr>
-map <leader>z :vertical resize +40<cr>
-map <leader>x :vertical resize -40<cr>
 map <leader>a :A<cr>
 map <leader>w :w<cr>
-map <leader>d <C-w><C-w>
 map <leader>g :%s/\<<C-r><C-w>\>/
 map <leader>p :r !pbpaste<cr>
 map <leader>D :call delete(expand('%')) \| bdelete!<cr>
@@ -127,9 +124,6 @@ nmap :WQ! :wq!
 
 nnoremap <silent> go :CtrlP<CR>
 nnoremap <silent> gr :CtrlPMRU<CR>
-
-imap <c-e> <c-o>$
-imap <c-a> <c-o>^
 
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 autocmd BufReadPost *
