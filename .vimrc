@@ -15,6 +15,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
 Plug 'dockyard/vim-easydir'
+Plug 'junegunn/vim-easy-align'
 
 Plug 'tpope/vim-rails'
 Plug 'c-brenn/phoenix.vim'
@@ -99,6 +100,11 @@ if executable('ag')
 endif
 
 nmap s <Plug>(easymotion-overwin-f)
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 map <leader>bi :!bundle install<cr>
 map <leader>v :vsplit<cr>
