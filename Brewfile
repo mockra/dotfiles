@@ -5,7 +5,6 @@
 brew "fish"
 brew "vim"
 brew "grc"
-brew "scroll-down"
 brew "reattach-to-user-namespace"
 brew "the_silver_searcher"
 brew "tmux"
