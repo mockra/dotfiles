@@ -131,6 +131,10 @@ nmap :WQ! :wq!
 nnoremap <silent> go :CtrlP<CR>
 nnoremap <silent> gr :CtrlPMRU<CR>
 
+map <Leader>vp :VimuxPromptCommand<CR>
+map <Leader>vi :VimuxInspectRunner<CR>
+map <Leader>vz :VimuxZoomRunner<CR>
+
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 autocmd BufReadPost *
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
