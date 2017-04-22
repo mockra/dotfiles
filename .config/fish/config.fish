@@ -23,3 +23,6 @@ set -gx PATH $HOME/.rbenv/shims /usr/local/bin /usr/bin /bin /usr/sbin /sbin $PA
 set -x NODE_PATH /usr/local/lib/node_modules
 
 rbenv rehash >/dev/null ^&1
+
+set fish_function_path $fish_function_path "/usr/local/lib/python2.7/site-packages/powerline/bindings/fish"
+powerline-setup
