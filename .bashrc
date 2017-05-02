@@ -21,3 +21,5 @@ export PATH=$AWS_ELB_HOME/bin:$EC2_HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sb
 export NODE_PATH=/usr/local/lib/node_modules
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

@@ -10,12 +10,14 @@ Plug 'trevordmiller/nova-vim'
 Plug 'ervandew/supertab'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'rking/ag.vim'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
 Plug 'dockyard/vim-easydir'
 Plug 'junegunn/vim-easy-align'
+
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 Plug 'tpope/vim-rails'
 Plug 'c-brenn/phoenix.vim'
@@ -87,18 +89,6 @@ let g:html_indent_tags = 'li\|p'
 let g:Powerline_symbols = 'fancy'
 let g:airline_powerline_fonts = 1
 
-:let g:ctrlp_match_window = 'min:4,max:15'
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn|yardoc)|bower_components|public|node_modules|_build|tmp|log|deps|priv\/static$',
-  \ 'file': '\v\.(exe|so|dll|dat|DS_Store)$'
-  \ }
-if executable('ag')
-  set grepprg=ag\ --nogroup\ --nocolor
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-  let g:ctrlp_use_caching = 0
-endif
-
 nmap s <Plug>(easymotion-overwin-f)
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
@@ -128,9 +118,24 @@ nmap :Q! :q!
 nmap :Wq! :wq!
 nmap :WQ! :wq!
 
-nnoremap <silent> go :CtrlP<CR>
-nnoremap <silent> gr :CtrlPMRU<CR>
+nnoremap <silent> go :Files<CR>
+nnoremap <silent> gr :History<CR>
 
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
+let g:VimuxHeight = "10"
 map <Leader>vp :VimuxPromptCommand<CR>
 map <Leader>vi :VimuxInspectRunner<CR>
 map <Leader>vz :VimuxZoomRunner<CR>

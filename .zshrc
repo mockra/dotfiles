@@ -27,3 +27,5 @@ alias bi='bundle install'
 alias bu='bundle update'
 
 eval "$(rbenv init -)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
