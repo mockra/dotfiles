@@ -78,6 +78,8 @@ set wildmode=list:longest,list:full
 set complete=.,w,t
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*/node_modules/*
 
+imap jj <Esc>
+
 au FileType gitcommit set tw=72
 au BufRead,BufNewFile *.md,*.txt setlocal spell
 au BufNewFile,BufRead *.md,*.txt setlocal wrap
