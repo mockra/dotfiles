@@ -6,7 +6,7 @@ module.exports = {
     fontSize: 12,
 
     // font family with optional fallbacks
-    fontFamily: '"Noto Mono", Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
+    fontFamily: 'Inconsolata-g for Powerline',
 
     // terminal cursor background color (hex)
     cursorColor: '#F81CE5',
