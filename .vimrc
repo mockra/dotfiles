@@ -138,9 +138,7 @@ let g:fzf_colors =
   \ 'header':  ['fg', 'Comment'] }
 
 let g:VimuxHeight = "10"
-map <Leader>vp :VimuxPromptCommand<CR>
-map <Leader>vi :VimuxInspectRunner<CR>
-map <Leader>vz :VimuxZoomRunner<CR>
+map <Leader>z :VimuxZoomRunner<CR>
 
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 autocmd BufReadPost *
