@@ -67,7 +67,7 @@ set list listchars=tab:»·,trail:·
 set lazyredraw
 set relativenumber
 
-set textwidth=79
+set textwidth=109
 set backspace=2
 set ignorecase smartcase
 
