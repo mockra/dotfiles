@@ -1,0 +1,21 @@
+"*":
+  "advanced-open-file":
+    createDirectories: true
+  core:
+    closeDeletedFileTabs: true
+    telemetryConsent: "limited"
+  editor:
+    fontFamily: "Inconsolata-g for Powerline"
+    showInvisibles: true
+    softWrap: true
+  "exception-reporting":
+    userId: "dcfd5a15-ee32-40aa-8a6f-32f70b709a7f"
+  "markdown-writer":
+    fileExtension: ".md"
+  "ruby-test":
+    minitestFileCommand: "script/testrb_or_zt {relative_path}"
+    minitestSingleCommand: "script/testrb_or_zt {relative_path} -n '/{regex}/'"
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ensureSingleTrailingNewline: false
