@@ -12,10 +12,11 @@
     userId: "dcfd5a15-ee32-40aa-8a6f-32f70b709a7f"
   "markdown-writer":
     fileExtension: ".md"
+  "platformio-ide-terminal":
+    style: {}
   "ruby-test":
-    minitestFileCommand: "script/testrb_or_zt {relative_path}"
-    minitestSingleCommand: "script/testrb_or_zt {relative_path} -n '/{regex}/'"
+    minitestFileCommand: "bin/zeus test {relative_path}"
+    minitestSingleCommand: "bin/zeus test {relative_path}:{line_number}"
   welcome:
     showOnStartup: false
-  whitespace:
-    ensureSingleTrailingNewline: false
+  whitespace: {}
