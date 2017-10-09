@@ -6,17 +6,32 @@
     telemetryConsent: "limited"
   editor:
     fontFamily: "Inconsolata-g for Powerline"
+    fontSize: 12
+    preferredLineLength: 100
     showInvisibles: true
     softWrap: true
   "exception-reporting":
     userId: "dcfd5a15-ee32-40aa-8a6f-32f70b709a7f"
   "markdown-writer":
     fileExtension: ".md"
+    siteDraftsDir: "_posts/"
+    siteEngine: "jekyll"
+    sitePostsDir: "_posts/"
+    siteUrl: "mockra.com"
+  "one-dark-ui":
+    fontSize: 10
   "platformio-ide-terminal":
     style: {}
   "ruby-test":
     minitestFileCommand: "bin/zeus test {relative_path}"
     minitestSingleCommand: "bin/zeus test {relative_path}:{line_number}"
+  tabs:
+    enableVcsColoring: true
   welcome:
     showOnStartup: false
   whitespace: {}
+  zentabs:
+    maximumOpenedTabs: 10
+    neverCloseDirty: true
+    neverCloseNew: true
+    neverCloseUnsaved: true

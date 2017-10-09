@@ -1,6 +1,6 @@
 [user]
-  name = David Ratajczak
-  email = david@mockra.com
+	name = David Ratajczak
+	email = david@mockra.com
 [alias]
   aa = add -all
   ap = add --patch
