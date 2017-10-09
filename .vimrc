@@ -14,7 +14,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
 Plug 'dockyard/vim-easydir'
-Plug 'junegunn/vim-easy-align'
+Plug 'godlygeek/tabular'
+Plug 'rhysd/committia.vim'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -31,6 +32,7 @@ Plug 'bswinnerton/vim-test-github'
 
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-git'
+Plug 'airblade/vim-gitgutter'
 
 Plug 'ludovicchabant/vim-gutentags'
 call plug#end()
