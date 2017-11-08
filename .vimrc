@@ -115,6 +115,7 @@ map <leader>D :call delete(expand('%')) \| bdelete!<cr>
 map <leader>s :%sort<cr>
 map <leader>y "*y<cr>
 map <leader>q :q<cr>
+map <leader>h :s/:\([^ ]*\)\(\s*\)=>/\1:/g<cr>
 nnoremap <leader>yf :let @*=expand("%")<CR>
 
 nmap <silent> <leader>t :w \| :TestNearest<CR>
