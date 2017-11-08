@@ -5,7 +5,7 @@ set nocompatible
 filetype plugin indent on
 
 call plug#begin('~/.vim/plugged')
-Plug 'trevordmiller/nova-vim'
+Plug 'joshdick/onedark.vim'
 
 Plug 'ervandew/supertab'
 Plug 'Lokaltog/vim-easymotion'
@@ -45,12 +45,16 @@ let g:gutentags_cache_dir = '~/.tags_cache'
 
 let test#runners = {'Ruby': ['GitHub']}
 let test#strategy = "vimux"
+colorscheme onedark
 
-colorscheme nova
 syntax on
 set t_Co=256
 set cc=+1
 set cursorline
+
+if (has("termguicolors"))
+  set termguicolors
+endif
 
 set nobackup
 set nowritebackup
