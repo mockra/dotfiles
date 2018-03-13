@@ -3,6 +3,9 @@
     createDirectories: true
   core:
     closeDeletedFileTabs: true
+    disabledPackages: [
+      "github"
+    ]
     telemetryConsent: "limited"
   editor:
     fontFamily: "Inconsolata-g for Powerline"
