@@ -45,3 +45,5 @@ Thumbs.db
 /node_modules/
 
 notes.md
+
+.irb_history
