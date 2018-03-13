@@ -15,7 +15,6 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
 Plug 'dockyard/vim-easydir'
 Plug 'godlygeek/tabular'
-Plug 'rhysd/committia.vim'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
