@@ -19,7 +19,6 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'tpope/vim-sensible'
 
 Plug 'junegunn/goyo.vim'
-Plug 'amix/vim-zenroom2'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
