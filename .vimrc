@@ -14,9 +14,7 @@ Plug 'tpope/vim-surround'
 Plug 'dockyard/vim-easydir'
 Plug 'godlygeek/tabular'
 
-Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-airline/vim-airline'
-Plug 'edkolev/tmuxline.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'tpope/vim-sensible'
 
