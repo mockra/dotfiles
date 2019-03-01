@@ -20,6 +20,9 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'tpope/vim-sensible'
 
+Plug 'junegunn/goyo.vim'
+Plug 'amix/vim-zenroom2'
+
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
@@ -107,6 +110,7 @@ map <leader>s :%sort<cr>
 map <leader>y "*y<cr>
 map <leader>q :q<cr>
 map <leader>h :s/:\([^ ]*\)\(\s*\)=>/\1:/g<cr>
+map <leader>o :Goyo<cr>
 nnoremap <leader>yf :let @*=expand("%")<CR>
 
 nmap <silent> <leader>t :w \| :TestNearest<CR>
