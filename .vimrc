@@ -18,6 +18,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-airline/vim-airline'
 Plug 'edkolev/tmuxline.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'tpope/vim-sensible'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -43,7 +44,8 @@ let test#javascript#mocha#options = '-A --compilers js:babel-register'
 let test#runners = {'Ruby': ['GitHub']}
 let test#strategy = "vimux"
 
-syntax on
+syntax enable
+color dracula
 set t_Co=256
 set cc=+1
 set cursorline
