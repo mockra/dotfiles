@@ -15,6 +15,7 @@
 !.gitignore
 !.hyper.js
 !.tmux.conf
+!.tmux_theme
 !com.googlecode.iterm2.plist
 !Brewfile
 !.atom/config.cson

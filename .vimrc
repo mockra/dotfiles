@@ -5,8 +5,6 @@ set nocompatible
 filetype plugin indent on
 
 call plug#begin('~/.vim/plugged')
-Plug 'joshdick/onedark.vim'
-
 Plug 'ervandew/supertab'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'rking/ag.vim'
@@ -16,12 +14,15 @@ Plug 'tpope/vim-surround'
 Plug 'dockyard/vim-easydir'
 Plug 'godlygeek/tabular'
 
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'edkolev/tmuxline.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
+
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 Plug 'tpope/vim-rails'
-Plug 'c-brenn/phoenix.vim'
-Plug 'tpope/vim-projectionist'
 
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
@@ -32,19 +33,15 @@ Plug 'bswinnerton/vim-test-github'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-git'
 Plug 'airblade/vim-gitgutter'
-
-Plug 'ludovicchabant/vim-gutentags'
 call plug#end()
 
 let g:ruby_path = '/Users/mockra/.rbenv/shims/ruby'
 let g:ruby_indent_access_modifier_style = 'outdent'
 
 let test#javascript#mocha#options = '-A --compilers js:babel-register'
-let g:gutentags_cache_dir = '~/.tags_cache'
 
 let test#runners = {'Ruby': ['GitHub']}
 let test#strategy = "vimux"
-colorscheme onedark
 
 syntax on
 set t_Co=256
@@ -93,15 +90,8 @@ au BufRead,BufNewFile *.pill setfiletype ruby
 au FileType qf setlocal wrap linebreak
 
 let g:html_indent_tags = 'li\|p'
-let g:Powerline_symbols = 'fancy'
-let g:airline_powerline_fonts = 1
 
 nmap s <Plug>(easymotion-overwin-f)
-
-" Start interactive EasyAlign in visual mode (e.g. vipga)
-xmap ga <Plug>(EasyAlign)
-" Start interactive EasyAlign for a motion/text object (e.g. gaip)
-nmap ga <Plug>(EasyAlign)
 
 map <leader>bi :!bundle install<cr>
 map <leader>v :vsplit<cr>
@@ -146,6 +136,9 @@ let g:fzf_colors =
 let g:VimuxHeight = "10"
 map <Leader>z :VimuxZoomRunner<CR>
 
+let g:airline_theme='dracula'
+let g:tmuxline_preset = 'nightly_fox'
+
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 autocmd BufReadPost *
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
@@ -169,7 +162,3 @@ function! MapCR()
 endfunction
 call MapCR()
 nnoremap <leader><leader> <c-^>
-
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
