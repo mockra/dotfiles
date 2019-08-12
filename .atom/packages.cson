@@ -1,7 +1,0 @@
-packages: [
-  "advanced-open-file"
-  "file-icons"
-  "package-sync"
-  "platformio-ide-terminal"
-  "ruby-test"
-]

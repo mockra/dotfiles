@@ -2,7 +2,6 @@
 # Usage: `brew bundle Brewfile`
 
 # Update to latest
-brew "fish"
 brew "vim"
 brew "grc"
 brew "reattach-to-user-namespace"
