@@ -72,7 +72,6 @@ set relativenumber
 set textwidth=109
 set backspace=2
 set ignorecase smartcase
-set redrawtime=10000
 
 set number
 set numberwidth=5
