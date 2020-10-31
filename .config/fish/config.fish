@@ -1,7 +1,10 @@
+starship init fish | source
+
 export EDITOR="vim"
 
 # Setup git alias commands
 alias g='git'
+alias ga="g add"
 alias gd='g diff'
 alias gA="g add -A"
 alias gc="g commit -v"

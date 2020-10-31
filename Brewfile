@@ -1,3 +1,4 @@
+tap "homebrew/cask-fonts"
 # Install command-line tools using Homebrew
 # Usage: `brew bundle Brewfile`
 
@@ -9,4 +10,9 @@ brew "the_silver_searcher"
 brew "tmux"
 brew "exa"
 
+# Shell and Prompt
 brew 'fish'
+brew 'starship'
+
+# Fonts for Prompt
+cask 'font-hack-nerd-font'
