@@ -8,3 +8,5 @@ brew "reattach-to-user-namespace"
 brew "the_silver_searcher"
 brew "tmux"
 brew "exa"
+
+brew 'fish'

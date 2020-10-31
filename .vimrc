@@ -163,3 +163,27 @@ function! MapCR()
 endfunction
 call MapCR()
 nnoremap <leader><leader> <c-^>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" VIM-RUBY CONFIGURATION
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Do this:
+"   first
+"     .second do |x|
+"       something
+"     end
+" Not this:
+"   first
+"     .second do |x|
+"     something
+"   end
+:let g:ruby_indent_block_style = 'do'
+" Do this:
+"     x = if condition
+"       something
+"     end
+" Not this:
+"     x = if condition
+"           something
+"         end
+:let g:ruby_indent_assignment_style = 'variable'
