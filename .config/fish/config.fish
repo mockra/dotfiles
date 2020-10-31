@@ -1,6 +1,10 @@
+set fish_greeting
 starship init fish | source
 
 export EDITOR="vim"
+
+# Navigation
+alias ..="cd .."
 
 # Setup git alias commands
 alias g='git'
@@ -20,3 +24,8 @@ alias bi='bundle install'
 alias bu='bundle update'
 
 alias ls='exa'
+
+# Tmux
+alias t="tmux"
+alias tn="t new -t"
+alias ta="t attach -t"
