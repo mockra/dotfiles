@@ -1,6 +1,6 @@
 [user]
-	name = David Ratajczak
-	email = david@mockra.com
+  name = David Ratajczak
+  email = david@mockra.com
 [alias]
   aa = add -all
   ap = add --patch
@@ -38,7 +38,7 @@
 [credential]
   helper = osxkeychain
 [filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
