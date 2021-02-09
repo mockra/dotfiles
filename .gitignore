@@ -8,6 +8,7 @@
 !.githelpers
 !.gitignore_global
 !.config/fish/
+!.config/alacritty/
 !.agignore
 !.gemrc
 !.gitignore

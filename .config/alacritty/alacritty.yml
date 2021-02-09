@@ -1,0 +1,15 @@
+window:
+  dynamic_padding: true
+font:
+  normal:
+    family: Iosevka
+  bold:
+    family: Iosevka
+  italic:
+    family: Iosevka
+  bold_italic:
+    family: Iosevka
+  size: 13
+  use_thin_strokes: true
+import:
+  - ~/.config/alacritty/dracula.yml

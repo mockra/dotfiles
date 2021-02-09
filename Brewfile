@@ -17,4 +17,4 @@ brew 'fish'
 brew 'gh'
 
 # Fonts for Prompt
-cask 'font-hack-nerd-font'
+cask 'font-iosevka'
