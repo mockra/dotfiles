@@ -1,0 +1,1 @@
+/Users/mockra/.fzf/shell/key-bindings.fish

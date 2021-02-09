@@ -1,5 +1,4 @@
 set fish_greeting
-starship init fish | source
 
 export EDITOR="vim"
 
@@ -16,6 +15,7 @@ alias gp="g push"
 alias gup='g pull --rebase'
 alias gst='g status'
 alias gpu='g push -u origin HEAD'
+alias gcm='g co master'
 
 alias v='vim'
 

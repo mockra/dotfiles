@@ -7,7 +7,7 @@
 !.gitconfig
 !.githelpers
 !.gitignore_global
-!.config/fish/config.fish
+!.config/fish/
 !.agignore
 !.gemrc
 !.gitignore

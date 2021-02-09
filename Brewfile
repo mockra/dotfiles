@@ -12,7 +12,9 @@ brew "exa"
 
 # Shell and Prompt
 brew 'fish'
-brew 'starship'
+
+# GitHub CLI
+brew 'gh'
 
 # Fonts for Prompt
 cask 'font-hack-nerd-font'
