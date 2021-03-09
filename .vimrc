@@ -113,7 +113,7 @@ map <leader>o :Goyo<cr>
 nnoremap <leader>yf :let @*=expand("%")<CR>
 
 nmap <silent> <leader>t :w \| :TestNearest \| :VimuxZoomRunner<CR>
-nmap <silent> <leader>T :w \| :TestFile<CR>
+nmap <silent> <leader>T :w \| :TestFile \| :VimuxZoomRunner<CR>
 nmap :W :w
 nmap :W! :w!
 nmap :Q :q
