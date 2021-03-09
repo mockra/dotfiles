@@ -14,8 +14,8 @@ Plug 'tpope/vim-surround'
 Plug 'dockyard/vim-easydir'
 Plug 'godlygeek/tabular'
 
-Plug 'vim-airline/vim-airline'
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'itchyny/lightline.vim'
+Plug 'arcticicestudio/nord-vim'
 Plug 'tpope/vim-sensible'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -42,8 +42,12 @@ let test#javascript#mocha#options = '-A --compilers js:babel-register'
 let test#runners = {'Ruby': ['GitHub']}
 let test#strategy = "vimux"
 
+let g:lightline = {
+      \ 'colorscheme': 'nord',
+      \ }
+
 syntax enable
-color dracula
+colorscheme nord
 set t_Co=256
 set cc=+1
 set cursorline
@@ -108,7 +112,7 @@ map <leader>h :s/:\([^ ]*\)\(\s*\)=>/\1:/g<cr>
 map <leader>o :Goyo<cr>
 nnoremap <leader>yf :let @*=expand("%")<CR>
 
-nmap <silent> <leader>t :w \| :TestNearest<CR>
+nmap <silent> <leader>t :w \| :TestNearest \| :VimuxZoomRunner<CR>
 nmap <silent> <leader>T :w \| :TestFile<CR>
 nmap :W :w
 nmap :W! :w!
@@ -134,10 +138,16 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
+hi htmlArg gui=italic
+hi Comment gui=italic
+hi Type    gui=italic
+hi htmlArg cterm=italic
+hi Comment cterm=italic
+hi Type    cterm=italic
+
 let g:VimuxHeight = "10"
 map <Leader>z :VimuxZoomRunner<CR>
 
-let g:airline_theme='dracula'
 let g:tmuxline_preset = 'nightly_fox'
 
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript

@@ -16,11 +16,11 @@ brew 'fish'
 # GitHub CLI
 brew 'gh'
 
-# Fonts for Prompt
-cask 'font-iosevka'
+# Fonts
+cask 'font-mononoki'
 
 # Terminal
-cask 'alacritty'
+cask 'kitty'
 
 # Mac Apps
 mas '1Password 7', id: 1333542190

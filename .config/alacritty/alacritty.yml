@@ -3,15 +3,14 @@ window:
   startup_mode: Fullscreen
 font:
   normal:
-    family: Iosevka
+    family: SF Mono
   bold:
-    family: Iosevka
+    family: SF Mono
   italic:
-    family: Iosevka
+    family: SF Mono
   bold_italic:
-    family: Iosevka
-  size: 13
-  use_thin_strokes: true
+    family: SF Mono
+  size: 12
 import:
   - ~/.config/alacritty/dracula.yml
 selection:

@@ -11,13 +11,6 @@ function fish_prompt
   # I like an extra new line between commands
   echo
 
-  # No battery if we're in tmux
-  set --local in_tmux (echo $TERM | grep "^screen")
-  if [ ! "$in_tmux" ]
-    echo -n (fish_battery)
-    echo -n " in "
-  end
-
   # Print current folder, `~` if $HOME
   set_color --bold blue
   echo -n (basename (string replace -r "^$HOME" "~"  $PWD))"/"
