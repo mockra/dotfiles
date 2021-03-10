@@ -1,4 +1,3 @@
-tap "homebrew/cask-fonts"
 # Install command-line tools using Homebrew
 # Usage: `brew bundle Brewfile`
 
@@ -16,11 +15,8 @@ brew 'fish'
 # GitHub CLI
 brew 'gh'
 
-# Fonts
-cask 'font-mononoki'
-
 # Terminal
-cask 'kitty'
+cask 'iterm2'
 
 # Mac Apps
 mas '1Password 7', id: 1333542190

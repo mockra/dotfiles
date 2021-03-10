@@ -14,6 +14,9 @@ Plug 'tpope/vim-surround'
 Plug 'dockyard/vim-easydir'
 Plug 'godlygeek/tabular'
 
+Plug 'tpope/vim-git'
+Plug 'airblade/vim-gitgutter'
+
 Plug 'itchyny/lightline.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'tpope/vim-sensible'
@@ -21,7 +24,6 @@ Plug 'tpope/vim-sensible'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-Plug 'tpope/vim-rails'
 
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
@@ -29,13 +31,14 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'janko-m/vim-test'
 Plug 'bswinnerton/vim-test-github'
 
-Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-git'
-Plug 'airblade/vim-gitgutter'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+Plug 'elixir-lang/vim-elixir'
+Plug 'fatih/vim-go'
+Plug 'pangloss/vim-javascript'
 call plug#end()
 
 let g:ruby_path = '/Users/mockra/.rbenv/shims/ruby'
-let g:ruby_indent_access_modifier_style = 'outdent'
 
 let test#javascript#mocha#options = '-A --compilers js:babel-register'
 
