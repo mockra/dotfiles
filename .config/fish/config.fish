@@ -29,3 +29,6 @@ alias ls='exa'
 alias t="tmux"
 alias tn="t new -t"
 alias ta="t attach -t"
+
+set -gx PATH $HOME/.rbenv/shims /usr/local/bin /usr/bin /bin /usr/sbin /sbin $PATH
+rbenv rehash >/dev/null ^&1

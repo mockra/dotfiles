@@ -2,7 +2,6 @@ set shell=bash
 scriptencoding utf-8
 set encoding=utf-8
 set nocompatible
-filetype plugin indent on
 
 call plug#begin('~/.vim/plugged')
 Plug 'ervandew/supertab'
@@ -47,9 +46,23 @@ let test#strategy = "vimux"
 
 let g:lightline = {
       \ 'colorscheme': 'nord',
+      \ 'component_function': {
+      \   'filename': 'LightlineFilename',
+      \ },
       \ }
 
-syntax enable
+function! LightlineFilename()
+  let root = fnamemodify(get(b:, 'git_dir'), ':h')
+  let path = expand('%:p')
+  if path[:len(root)-1] ==# root
+    return path[len(root)+1:]
+  endif
+  return expand('%')
+endfunction
+
+syntax on
+filetype indent on
+filetype plugin on
 colorscheme nord
 set t_Co=256
 set cc=+1
@@ -141,13 +154,6 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
-hi htmlArg gui=italic
-hi Comment gui=italic
-hi Type    gui=italic
-hi htmlArg cterm=italic
-hi Comment cterm=italic
-hi Type    cterm=italic
-
 let g:VimuxHeight = "10"
 map <Leader>z :VimuxZoomRunner<CR>
 
@@ -200,3 +206,11 @@ nnoremap <leader><leader> <c-^>
 "           something
 "         end
 :let g:ruby_indent_assignment_style = 'variable'
+
+hi htmlArg gui=italic
+hi Comment gui=italic
+hi Type    gui=italic
+hi htmlArg cterm=italic
+hi Comment cterm=italic
+hi Type    cterm=italic
+
