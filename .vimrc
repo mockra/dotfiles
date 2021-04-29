@@ -6,7 +6,7 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 Plug 'ervandew/supertab'
 Plug 'Lokaltog/vim-easymotion'
-Plug 'rking/ag.vim'
+Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
