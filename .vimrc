@@ -17,12 +17,11 @@ Plug 'tpope/vim-git'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'itchyny/lightline.vim'
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'arcticicestudio/nord-vim'
 Plug 'tpope/vim-sensible'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-
 
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
@@ -45,7 +44,7 @@ let test#runners = {'Ruby': ['GitHub']}
 let test#strategy = "vimux"
 
 let g:lightline = {
-      \ 'colorscheme': 'dracula',
+      \ 'colorscheme': 'nord',
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
       \ },
@@ -60,17 +59,15 @@ function! LightlineFilename()
   return expand('%')
 endfunction
 
+set termguicolors
+colorscheme nord
+
 syntax on
 filetype indent on
 filetype plugin on
-colorscheme dracula
 set t_Co=256
 set cc=+1
 set cursorline
-
-if (has("termguicolors"))
-  set termguicolors
-endif
 
 set nobackup
 set nowritebackup
