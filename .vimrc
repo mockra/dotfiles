@@ -17,7 +17,7 @@ Plug 'tpope/vim-git'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'itchyny/lightline.vim'
-Plug 'srcery-colors/srcery-vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'tpope/vim-sensible'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -45,7 +45,7 @@ let test#runners = {'Ruby': ['GitHub']}
 let test#strategy = "vimux"
 
 let g:lightline = {
-      \ 'colorscheme': 'srcery',
+      \ 'colorscheme': 'dracula',
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
       \ },
@@ -63,7 +63,7 @@ endfunction
 syntax on
 filetype indent on
 filetype plugin on
-colorscheme srcery
+colorscheme dracula
 set t_Co=256
 set cc=+1
 set cursorline
