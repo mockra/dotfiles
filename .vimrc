@@ -43,6 +43,9 @@ let test#javascript#mocha#options = '-A --compilers js:babel-register'
 let test#runners = {'Ruby': ['GitHub']}
 let test#strategy = "vimux"
 
+set termguicolors
+colorscheme base16-tomorrow-night-eighties
+
 let g:lightline = {
       \ 'colorscheme': 'Tomorrow_Night_Eighties',
       \ 'component_function': {
@@ -59,8 +62,9 @@ function! LightlineFilename()
   return expand('%')
 endfunction
 
-set termguicolors
-colorscheme base16-tomorrow-night-eighties
+if filereadable(expand("~/.vimrc_background"))
+  source ~/.vimrc_background
+endif
 
 syntax on
 filetype indent on

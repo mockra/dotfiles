@@ -30,5 +30,11 @@ alias t="tmux"
 alias tn="t new -t"
 alias ta="t attach -t"
 
+# Base16 Shell
+if status --is-interactive
+  set BASE16_SHELL "$HOME/.config/base16-shell/"
+  source "$BASE16_SHELL/profile_helper.fish"
+end
+
 set -gx PATH $HOME/.rbenv/shims /usr/local/bin /usr/bin /bin /usr/sbin /sbin $PATH
 rbenv rehash >/dev/null ^&1
