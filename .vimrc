@@ -44,7 +44,7 @@ let test#runners = {'Ruby': ['GitHub']}
 let test#strategy = "vimux"
 
 let g:lightline = {
-      \ 'colorscheme': 'base16-tomorrow-nightly-eighties',
+      \ 'colorscheme': 'Tomorrow_Night_Eighties',
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
       \ },
