@@ -17,7 +17,7 @@ Plug 'tpope/vim-git'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'itchyny/lightline.vim'
-Plug 'arcticicestudio/nord-vim'
+Plug 'chriskempson/base16-vim'
 Plug 'tpope/vim-sensible'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -44,7 +44,7 @@ let test#runners = {'Ruby': ['GitHub']}
 let test#strategy = "vimux"
 
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': 'base16-tomorrow-nightly-eighties',
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
       \ },
@@ -60,7 +60,7 @@ function! LightlineFilename()
 endfunction
 
 set termguicolors
-colorscheme nord
+colorscheme base16-tomorrow-night-eighties
 
 syntax on
 filetype indent on

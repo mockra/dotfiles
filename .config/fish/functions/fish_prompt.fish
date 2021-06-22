@@ -12,7 +12,7 @@ function fish_prompt
   echo
 
   # Print current folder, `~` if $HOME
-  set_color --bold blue
+  set_color --bold 789aad
   echo -n (basename (string replace -r "^$HOME" "~"  $PWD))"/"
   set_color normal
 
@@ -27,9 +27,9 @@ function fish_prompt
     echo -n " on "
 
     if [ "$clean" ]
-      set_color --bold green
+      set_color --bold 87d295
     else
-      set_color --bold red
+      set_color --bold ff676f
     end
 
     echo -n $branch
@@ -38,7 +38,7 @@ function fish_prompt
     # Now, lets check for and announce unpushed commits
     if [ "$unpushed" ]
       echo -n " with "
-      set_color --bold magenta
+      set_color --bold 9f7aa4
       echo -n "unpushed"
       set_color normal
     end

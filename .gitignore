@@ -9,7 +9,7 @@
 !.gitignore_global
 !.config/fish/
 !.config/alacritty/
-!.config/kitty/
+!.config/iterm2/
 !.agignore
 !.gemrc
 !.gitignore
