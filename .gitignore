@@ -10,6 +10,7 @@
 !.config/fish/
 !.config/alacritty/
 !.config/iterm2/
+!.config/nvim/
 !.config/base16-shell
 !.agignore
 !.gemrc

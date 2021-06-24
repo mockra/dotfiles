@@ -9,6 +9,7 @@ brew "the_silver_searcher"
 brew "tmux"
 brew "exa"
 brew "ctags"
+brew "neovim"
 
 # Shell and Prompt
 brew 'fish'

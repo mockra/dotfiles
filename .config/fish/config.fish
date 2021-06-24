@@ -17,7 +17,7 @@ alias gst='g status'
 alias gpu='g push -u origin HEAD'
 alias gcm='g co master'
 
-alias v='vim'
+alias v='nvim'
 
 alias be='bundle exec'
 alias bi='bundle install'
