@@ -17,7 +17,7 @@ alias gst='g status'
 alias gpu='g push -u origin HEAD'
 alias gcm='g co master'
 
-alias v='nvim'
+alias v='vim'
 
 alias be='bundle exec'
 alias bi='bundle install'
@@ -37,4 +37,4 @@ if status --is-interactive
 end
 
 set -gx PATH $HOME/.rbenv/shims /usr/local/bin /usr/bin /bin /usr/sbin /sbin $PATH
-rbenv rehash >/dev/null ^&1
+fish_add_path /usr/local/opt/libxml2/bin

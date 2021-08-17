@@ -6,7 +6,6 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 Plug 'ervandew/supertab'
 Plug 'Lokaltog/vim-easymotion'
-Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
@@ -64,6 +63,10 @@ endfunction
 
 if filereadable(expand("~/.vimrc_background"))
   source ~/.vimrc_background
+endif
+
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
 endif
 
 syntax on
@@ -140,6 +143,8 @@ nmap :WQ! :wq!
 
 nnoremap <silent> go :Files<CR>
 nnoremap <silent> gr :History<CR>
+" Prevent Ag from matching file names
+command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
