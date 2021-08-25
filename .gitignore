@@ -16,6 +16,7 @@
 !.gemrc
 !.gitignore
 !.tmux.conf
+!.tmux-status.conf
 !.tmux_theme
 !com.googlecode.iterm2.plist
 !.Nord.itermcolors
