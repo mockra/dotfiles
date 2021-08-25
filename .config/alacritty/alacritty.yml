@@ -1,0 +1,18 @@
+window:
+  dynamic_padding: true
+  startup_mode: Fullscreen
+font:
+  normal:
+    family: Cartograph CF
+  bold:
+    family: Cartograph CF
+  italic:
+    family: Cartograph CF
+  bold_italic:
+    family: Cartograph CF
+  size: 12
+import:
+  - ~/.config/alacritty/theme.yml
+selection:
+  # When set to `true`, selected text will be copied to the primary clipboard.
+  save_to_clipboard: true
