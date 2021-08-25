@@ -21,7 +21,7 @@
   status = auto
 [core]
   excludesfile = ~/.gitignore_global
-  editor = vim
+  editor = nvim
   autocrlf = input
 [log]
   decorate = full
