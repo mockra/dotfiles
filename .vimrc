@@ -4,11 +4,12 @@ set encoding=utf-8
 set nocompatible
 
 call plug#begin('~/.vim/plugged')
-Plug 'ervandew/supertab'
-Plug 'Lokaltog/vim-easymotion'
+Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
+Plug 'ervandew/supertab'
+Plug 'Lokaltog/vim-easymotion'
 Plug 'dockyard/vim-easydir'
 Plug 'godlygeek/tabular'
 
@@ -16,8 +17,8 @@ Plug 'tpope/vim-git'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'itchyny/lightline.vim'
-Plug 'chriskempson/base16-vim'
-Plug 'tpope/vim-sensible'
+Plug 'edkolev/tmuxline.vim'
+Plug 'ghifarit53/tokyonight-vim'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -28,11 +29,9 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'janko-m/vim-test'
 Plug 'bswinnerton/vim-test-github'
 
-Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
-Plug 'elixir-lang/vim-elixir'
-Plug 'fatih/vim-go'
-Plug 'pangloss/vim-javascript'
+
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 let g:ruby_path = '/Users/mockra/.rbenv/shims/ruby'
@@ -43,14 +42,17 @@ let test#runners = {'Ruby': ['GitHub']}
 let test#strategy = "vimux"
 
 set termguicolors
-colorscheme base16-tomorrow-night-eighties
+let g:tokyonight_style = 'night'
+let g:tokyonight_enable_italic = 1
+colorscheme tokyonight
 
 let g:lightline = {
-      \ 'colorscheme': 'Tomorrow_Night_Eighties',
+      \ 'colorscheme': 'tokyonight',
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
       \ },
       \ }
+let g:tmuxline_preset = 'nightly_fox'
 
 function! LightlineFilename()
   let root = fnamemodify(get(b:, 'git_dir'), ':h')
@@ -60,10 +62,6 @@ function! LightlineFilename()
   endif
   return expand('%')
 endfunction
-
-if filereadable(expand("~/.vimrc_background"))
-  source ~/.vimrc_background
-endif
 
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
@@ -163,8 +161,6 @@ let g:fzf_colors =
 let g:VimuxHeight = "10"
 map <Leader>z :VimuxZoomRunner<CR>
 
-let g:tmuxline_preset = 'nightly_fox'
-
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 autocmd BufReadPost *
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
@@ -216,11 +212,3 @@ set tags=tags
 "           something
 "         end
 :let g:ruby_indent_assignment_style = 'variable'
-
-hi htmlArg gui=italic
-hi Comment gui=italic
-hi Type    gui=italic
-hi htmlArg cterm=italic
-hi Comment cterm=italic
-hi Type    cterm=italic
-

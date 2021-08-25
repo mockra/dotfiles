@@ -1,6 +1,6 @@
 set fish_greeting
 
-export EDITOR="vim"
+export EDITOR="nvim"
 
 # Navigation
 alias ..="cd .."
@@ -17,7 +17,7 @@ alias gst='g status'
 alias gpu='g push -u origin HEAD'
 alias gcm='g co master'
 
-alias v='vim'
+alias v='nvim'
 
 alias be='bundle exec'
 alias bi='bundle install'
@@ -29,12 +29,6 @@ alias ls='exa'
 alias t="tmux"
 alias tn="t new -t"
 alias ta="t attach -t"
-
-# Base16 Shell
-if status --is-interactive
-  set BASE16_SHELL "$HOME/.config/base16-shell/"
-  source "$BASE16_SHELL/profile_helper.fish"
-end
 
 set -gx PATH $HOME/.rbenv/shims /usr/local/bin /usr/bin /bin /usr/sbin /sbin $PATH
 fish_add_path /usr/local/opt/libxml2/bin
