@@ -7,7 +7,7 @@ set -x
 # Install Packages
 sudo apt-add-repository ppa:fish-shell/release-3
 sudo apt-get update
-sudo apt-get --assume-yes install silversearcher-ag fish tmux neovim
+sudo apt-get --assume-yes install silversearcher-ag fish tmux neovim exa
 
 ## Link Dotfiles
 mkdir $HOME/.config/nvim
