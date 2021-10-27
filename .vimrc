@@ -40,7 +40,7 @@ let g:ruby_path = '/Users/mockra/.rbenv/shims/ruby'
 let test#javascript#mocha#options = '-A --compilers js:babel-register'
 
 let test#runners = {'Ruby': ['GitHub']}
-let test#strategy = "vimux"
+let test#strategy = "neovim"
 
 set termguicolors
 let g:tokyonight_style = 'night'
@@ -133,8 +133,8 @@ map <leader>h :s/:\([^ ]*\)\(\s*\)=>/\1:/g<cr>
 map <leader>o :Goyo<cr>
 nnoremap <leader>yf :let @*=expand("%")<CR>
 
-nmap <silent> <leader>t :w \| :TestNearest \| :VimuxZoomRunner<CR>
-nmap <silent> <leader>T :w \| :TestFile \| :VimuxZoomRunner<CR>
+nmap <silent> <leader>t :w \| :TestNearest<CR>
+nmap <silent> <leader>T :w \| :TestFile<CR>
 nmap :W :w
 nmap :W! :w!
 nmap :Q :q
