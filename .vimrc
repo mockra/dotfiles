@@ -19,7 +19,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'ghifarit53/tokyonight-vim'
-Plug 'NLKNguyen/papercolor-theme'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -45,12 +44,10 @@ let test#strategy = "vimux"
 set termguicolors
 let g:tokyonight_style = 'night'
 let g:tokyonight_enable_italic = 1
-
-set background=light
-colorscheme PaperColor
+colorscheme tokyonight
 
 let g:lightline = {
-      \ 'colorscheme': 'PaperColor',
+      \ 'colorscheme': 'tokyonight',
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
       \ },
