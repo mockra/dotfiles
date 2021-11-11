@@ -10,7 +10,10 @@ brew "tmux"
 brew "exa"
 brew "ctags"
 brew "neovim"
+
+# Faster Git Status in Monorepo
 brew "watchman"
+tap "jgavris/rs-git-fsmonitor" "https://github.com/jgavris/rs-git-fsmonitor.git"
 
 # Shell and Prompt
 brew 'fish'
