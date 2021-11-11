@@ -28,5 +28,4 @@ cask 'iterm2'
 mas '1Password 7', id: 1333542190
 mas 'Slack', id: 803453959
 mas 'Things 3', id: 904280696
-mas 'Bear', id: 1091189122
 mas 'Magnet', id: 441258766
