@@ -10,6 +10,7 @@ brew "tmux"
 brew "exa"
 brew "ctags"
 brew "neovim"
+brew "watchman"
 
 # Shell and Prompt
 brew 'fish'
