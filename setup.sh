@@ -34,4 +34,4 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 nvim --headless +PlugInstall +qa
 
 # Set default shell
-sudo chsh -s "$(which fish)" "$(whoami)"
+# sudo chsh -s "$(which fish)" "$(whoami)"
