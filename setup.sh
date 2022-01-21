@@ -22,7 +22,7 @@ ln -sf $(pwd)/.gitconfig $HOME/.gitconfig
 
 rm -f $HOME/.zshrc
 
-sudo chsh -s "$(which fish)" "$(whoami)"
+fish
 
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 
@@ -37,4 +37,5 @@ nvim --headless +PlugInstall +qa
 
 # Set default shell
 ln -sf $PWD/.config/fish/* $HOME/.config/fish/
-source $HOME/.config/fish/config.fish
+
+sudo chsh -s "$(which fish)" "$(whoami)"
