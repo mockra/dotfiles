@@ -1,1 +1,1 @@
-/Users/mockra/.fzf/shell/key-bindings.fish
+$HOME/.fzf/shell/key-bindings.fish
