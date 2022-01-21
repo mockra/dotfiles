@@ -9,6 +9,10 @@ sudo apt-add-repository ppa:fish-shell/release-3
 sudo apt-get update -y
 sudo apt-get --assume-yes install silversearcher-ag fish tmux neovim exa
 
+rm -rf $HOME/.fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf
+$HOME/.fzf/install --all
+
 ## Link Dotfiles
 mkdir -p $HOME/.config/nvim
 mkdir -p $HOME/.config/fish
