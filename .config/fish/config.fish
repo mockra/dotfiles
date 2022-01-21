@@ -35,4 +35,3 @@ if test -e ~/.env
 end
 
 set -gx PATH $HOME/.rbenv/shims /usr/local/bin /usr/bin /bin /usr/sbin /sbin $PATH
-fish_add_path /usr/local/opt/libxml2/bin
