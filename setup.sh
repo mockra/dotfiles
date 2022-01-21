@@ -22,12 +22,6 @@ ln -sf $(pwd)/.gitconfig $HOME/.gitconfig
 
 rm -f $HOME/.zshrc
 
-fish
-
-curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-
-fisher install IlanCosman/tide@v5
-
 ### Install vim-plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
