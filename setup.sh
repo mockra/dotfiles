@@ -29,10 +29,10 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 ### Install NeoVim plugins
 nvim --headless +PlugInstall +qa
 
-fish -c "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher"
-fish -c "fisher install jorgebucaran/hydro"
-
 # Set default shell
 ln -sf $PWD/.config/fish/* $HOME/.config/fish/
+ln -sf $PWD/.config/fish/functions/* $HOME/.config/fish/functions/
+ln -sf $PWD/.config/fish/completions/* $HOME/.config/fish/completions/
+ln -sf $PWD/.config/fish/conf.d/* $HOME/.config/fish/conf.d/
 
 sudo chsh -s "$(which fish)" "$(whoami)"
