@@ -21,7 +21,8 @@ ln -s $(pwd)/.vimrc $HOME/.vimrc
 ln -s $(pwd)/.gitconfig $HOME/.gitconfig
 
 rm -f $HOME/.zshrc
-ln -s $(pwd)/.config/fish/* $HOME/.config/fish/
+
+sudo chsh -s "$(which fish)" "$(whoami)"
 
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 fisher install IlanCosman/tide@v5
@@ -34,4 +35,5 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 nvim --headless +PlugInstall +qa
 
 # Set default shell
-# sudo chsh -s "$(which fish)" "$(whoami)"
+ln -s $(pwd)/.config/fish/* $HOME/.config/fish/
+source $HOME/.config/fish/config.fish

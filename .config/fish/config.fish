@@ -30,5 +30,9 @@ alias t="tmux"
 alias tn="t new -t"
 alias ta="t attach -t"
 
+if test -e ~/.env
+  source ~/.env
+end
+
 set -gx PATH $HOME/.rbenv/shims /usr/local/bin /usr/bin /bin /usr/sbin /sbin $PATH
 fish_add_path /usr/local/opt/libxml2/bin
