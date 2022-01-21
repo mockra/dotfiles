@@ -7,6 +7,11 @@ set -x
 # Install Packages
 sudo apt-add-repository ppa:fish-shell/release-3
 sudo apt-get update
+echo 'deb http://download.opensuse.org/repositories/shells:/fish:/release:/3/Debian_10/ /' | sudo tee /etc/apt/sources.list.d/shells:fish:release:3.list
+curl -fsSL https://download.opensuse.org/repositories/shells:fish:release:3/Debian_10/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/shells_fish_release_3.gpg > /dev/null
+sudo apt update
+sudo apt-get install -y software-properties-common
+sudo apt-add-repository -y ppa:fish-shell/release-3
 sudo apt-get --assume-yes install silversearcher-ag fish tmux neovim exa
 
 ## Link Dotfiles
