@@ -32,7 +32,4 @@ nvim --headless +PlugInstall +qa
 # Set default shell
 ln -sf $PWD/.config/fish/* $HOME/.config/fish/
 
-fish -c "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher"
-fish -c "fisher install IlanCosman/tide@v5"
-
 sudo chsh -s "$(which fish)" "$(whoami)"
