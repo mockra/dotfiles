@@ -35,8 +35,6 @@
   autosquash = true
 [fetch]
   prune = true
-[credential]
-  helper = osxkeychain
 [filter "lfs"]
   required = true
   clean = git-lfs clean -- %f
