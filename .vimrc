@@ -102,6 +102,8 @@ set wildmode=list:longest,list:full
 set complete=.,w,t
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*/node_modules/*
 
+set inccommand=split
+
 imap jj <Esc>
 
 au FileType gitcommit set tw=72
