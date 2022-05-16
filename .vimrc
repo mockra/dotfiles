@@ -13,6 +13,8 @@ Plug 'Lokaltog/vim-easymotion'
 Plug 'dockyard/vim-easydir'
 Plug 'godlygeek/tabular'
 
+Plug 'rhysd/committia.vim'
+
 Plug 'tpope/vim-git'
 Plug 'airblade/vim-gitgutter'
 
