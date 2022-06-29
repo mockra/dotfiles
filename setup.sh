@@ -24,7 +24,8 @@ ln -sf $(pwd)/.config/nvim/* $HOME/.config/nvim/
 ln -sf $(pwd)/.vimrc $HOME/.vimrc
 ln -sf $(pwd)/.gitconfig $HOME/.gitconfig
 
-rm -f $HOME/.zshrc
+#rm -f $HOME/.zshrc
+#ln -sf $(pwd)/.zshrc $HOME/.zshrc
 
 ### Install vim-plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
