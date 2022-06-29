@@ -5,8 +5,6 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="cloud"
 
-HYPHEN_INSENSITIVE="true"
-
 zstyle ':omz:update' mode auto      # update automatically without asking
 
 # Uncomment the following line if pasting URLs and other text is messed up.
@@ -58,8 +56,6 @@ alias v='nvim'
 alias be='bundle exec'
 alias bi='bundle install'
 alias bu='bundle update'
-
-alias ls='exa'
 
 # Tmux
 alias t="tmux"

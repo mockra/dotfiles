@@ -6,7 +6,7 @@ set -x
 
 # Install Packages
 sudo apt-get update -y
-sudo apt-get --assume-yes install silversearcher-ag tmux neovim exa
+sudo apt-get --assume-yes install silversearcher-ag tmux neovim
 
 rm -rf $HOME/.fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf
