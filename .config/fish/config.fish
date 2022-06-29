@@ -16,6 +16,8 @@ alias gup='g pull --rebase'
 alias gst='g status'
 alias gpu='g push -u origin HEAD'
 alias gcm='g co master'
+alias gsd='gh cs delete'
+alias gsh='gh cs ssh'
 
 alias v='nvim'
 
