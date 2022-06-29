@@ -15,8 +15,6 @@ $HOME/.fzf/install --all
 ## Link Dotfiles
 mkdir -p $HOME/.config/nvim
 
-ln -sf $(pwd)/.bashrc $HOME/.bashrc
-
 ln -sf $(pwd)/.tmux.conf $HOME/.tmux.conf
 ln -sf $(pwd)/.tmux-status.conf $HOME/.tmux-status.conf
 

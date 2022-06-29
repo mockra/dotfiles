@@ -9,4 +9,4 @@ pager:
 # Aliases allow you to create nicknames for gh commands
 aliases:
     co: pr checkout
-    dev: '!gh cs ssh -c `gh cs create --status -r github/github -b master`'
+    dev: cs create --status -r github/github
