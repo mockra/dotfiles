@@ -5,9 +5,8 @@ exec 2>&1
 set -x
 
 # Install Packages
-sudo apt-add-repository ppa:fish-shell/release-3
 sudo apt-get update -y
-sudo apt-get --assume-yes install silversearcher-ag fish tmux neovim exa
+sudo apt-get --assume-yes install silversearcher-ag tmux neovim exa
 
 rm -rf $HOME/.fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf
@@ -15,7 +14,8 @@ $HOME/.fzf/install --all
 
 ## Link Dotfiles
 mkdir -p $HOME/.config/nvim
-mkdir -p $HOME/.config/fish
+
+ln -sf $(pwd)/.bashrc $HOME/.bashrc
 
 ln -sf $(pwd)/.tmux.conf $HOME/.tmux.conf
 ln -sf $(pwd)/.tmux-status.conf $HOME/.tmux-status.conf
@@ -32,11 +32,3 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 ### Install NeoVim plugins
 nvim --headless +PlugInstall +qa
-
-# Set default shell
-ln -sf $PWD/.config/fish/* $HOME/.config/fish/
-ln -sf $PWD/.config/fish/functions/* $HOME/.config/fish/functions/
-ln -sf $PWD/.config/fish/completions/* $HOME/.config/fish/completions/
-ln -sf $PWD/.config/fish/conf.d/* $HOME/.config/fish/conf.d/
-
-sudo chsh -s "$(which fish)" "$(whoami)"
