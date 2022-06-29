@@ -32,4 +32,4 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 ### Install NeoVim plugins
 nvim --headless +PlugInstall +qa
 
-zsh
+chsh -s $(which zsh)
