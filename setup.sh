@@ -19,7 +19,6 @@ $HOME/.fzf/install --all
 mkdir -p $HOME/.config/nvim
 
 ln -sf $(pwd)/.tmux.conf $HOME/.tmux.conf
-ln -sf $(pwd)/.tmux-status.conf $HOME/.tmux-status.conf
 
 ln -sf $(pwd)/.config/nvim/* $HOME/.config/nvim/
 ln -sf $(pwd)/.vimrc $HOME/.vimrc

@@ -20,7 +20,7 @@ Plug 'airblade/vim-gitgutter'
 
 Plug 'itchyny/lightline.vim'
 Plug 'edkolev/tmuxline.vim'
-Plug 'ghifarit53/tokyonight-vim'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -44,10 +44,8 @@ let test#runners = {'Ruby': ['GitHub']}
 let test#strategy = "vimux"
 
 set termguicolors
-let g:tokyonight_style = 'storm'
+let g:tokyonight_style = 'day'
 let g:tokyonight_enable_italic = 1
-colorscheme tokyonight
-
 let g:lightline = {
       \ 'colorscheme': 'tokyonight',
       \ 'component_function': {
@@ -55,6 +53,7 @@ let g:lightline = {
       \ },
       \ }
 let g:tmuxline_preset = 'nightly_fox'
+colorscheme tokyonight
 
 function! LightlineFilename()
   let root = fnamemodify(get(b:, 'git_dir'), ':h')
