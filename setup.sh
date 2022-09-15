@@ -6,7 +6,16 @@ set -x
 
 # Install Packages
 sudo apt-get update -y
-sudo apt-get --assume-yes install silversearcher-ag tmux neovim
+sudo apt-get --assume-yes install silversearcher-ag tmux fuse
+
+# Install neovim
+sudo modprobe fuse
+sudo groupadd fuse
+sudo usermod -a -G fuse "$(whoami)"
+wget https://github.com/github/copilot.vim/releases/download/neovim-nightlies/appimage.zip
+unzip appimage.zip
+sudo chmod u+x nvim.appimage
+sudo mv nvim.appimage /usr/local/bin/nvim
 
 rm -f $HOME/.zshrc
 ln -sf $(pwd)/.zshrc $HOME/.zshrc

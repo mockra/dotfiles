@@ -10,3 +10,4 @@ pager:
 aliases:
     co: pr checkout
     dev: cs create --status -r github/github
+    edu: cs create --status -r github/education-web
