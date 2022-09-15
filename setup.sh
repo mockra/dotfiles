@@ -20,7 +20,7 @@ sudo mv nvim.appimage /usr/local/bin/nvim
 # Install tmux
 wget https://github.com/nelsonenzo/tmux-appimage/releases/download/3.2a/tmux.appimage
 sudo chmod u+x tmux.appimage
-mv tmux.appimage /usr/local/bin/tmux
+sudo mv tmux.appimage /usr/local/bin/tmux
 
 rm -f $HOME/.zshrc
 ln -sf $(pwd)/.zshrc $HOME/.zshrc
