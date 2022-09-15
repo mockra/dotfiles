@@ -53,7 +53,7 @@ let g:lightline = {
       \ },
       \ }
 let g:tmuxline_preset = 'nightly_fox'
-colorscheme tokyonight
+colorscheme tokyonight-day
 
 function! LightlineFilename()
   let root = fnamemodify(get(b:, 'git_dir'), ':h')
