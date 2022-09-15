@@ -42,6 +42,7 @@ let test#javascript#mocha#options = '-A --compilers js:babel-register'
 
 let test#runners = {'Ruby': ['GitHub']}
 let test#strategy = "vimux"
+let test#ruby#rspec#executable = 'script/test'
 
 set termguicolors
 let g:tokyonight_style = 'day'
