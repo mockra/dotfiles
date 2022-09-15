@@ -34,8 +34,6 @@ Plug 'bswinnerton/vim-test-github'
 Plug 'tpope/vim-rails'
 
 Plug 'sheerun/vim-polyglot'
-
-Plug 'github/copilot.vim', { 'branch': 'main' }
 call plug#end()
 
 let g:ruby_path = '/Users/mockra/.rbenv/shims/ruby'
