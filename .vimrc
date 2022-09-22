@@ -32,8 +32,9 @@ Plug 'janko-m/vim-test'
 Plug 'bswinnerton/vim-test-github'
 
 Plug 'tpope/vim-rails'
-
 Plug 'sheerun/vim-polyglot'
+
+Plug 'ojroques/vim-oscyank', {'branch': 'main'}
 call plug#end()
 
 let g:ruby_path = '/Users/mockra/.rbenv/shims/ruby'
@@ -132,6 +133,7 @@ map <leader>y "*y<cr>
 map <leader>q :q<cr>
 map <leader>h :s/:\([^ ]*\)\(\s*\)=>/\1:/g<cr>
 map <leader>o :Goyo<cr>
+vnoremap <leader>y :OSCYank<CR>
 nnoremap <leader>yf :let @*=expand("%")<CR>
 
 nmap <silent> <leader>t :w \| :TestNearest \| :VimuxZoomRunner<CR>
