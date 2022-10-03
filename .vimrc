@@ -46,7 +46,7 @@ let test#strategy = "vimux"
 let test#ruby#rspec#executable = 'script/test'
 
 set termguicolors
-let g:tokyonight_style = 'day'
+let g:tokyonight_style = 'moon'
 let g:tokyonight_enable_italic = 1
 let g:lightline = {
       \ 'colorscheme': 'tokyonight',
@@ -55,7 +55,7 @@ let g:lightline = {
       \ },
       \ }
 let g:tmuxline_preset = 'nightly_fox'
-colorscheme tokyonight-day
+colorscheme tokyonight-moon
 
 function! LightlineFilename()
   let root = fnamemodify(get(b:, 'git_dir'), ':h')
