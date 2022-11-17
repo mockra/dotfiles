@@ -4,38 +4,59 @@ set encoding=utf-8
 set nocompatible
 
 call plug#begin('~/.vim/plugged')
-Plug 'tpope/vim-sensible'
+" Git + Hub Commands, e.g. :Git blame
+Plug 'tpope/vim-git'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+
+" LSP Setup
+Plug 'neovim/nvim-lspconfig'
+
+" FZF
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'gfanto/fzf-lsp.nvim', { 'branch': 'main' }
+Plug 'nvim-lua/plenary.nvim'
+
+" Copilot
+Plug 'github/copilot.vim'
+
+" Basic vim tools
+Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
-Plug 'ervandew/supertab'
+
+" Jump around: \\w
 Plug 'Lokaltog/vim-easymotion'
+
+" Easily create files: :e
 Plug 'dockyard/vim-easydir'
-Plug 'godlygeek/tabular'
 
-Plug 'rhysd/committia.vim'
-
-Plug 'tpope/vim-git'
+" Show cchanged lines
 Plug 'airblade/vim-gitgutter'
 
+" Themes
 Plug 'itchyny/lightline.vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-
-Plug 'benmills/vimux'
-Plug 'christoomey/vim-tmux-navigator'
-
+" Testiing
 Plug 'janko-m/vim-test'
 Plug 'bswinnerton/vim-test-github'
+Plug 'benmills/vimux'
 
+" Moving Around
+Plug 'christoomey/vim-tmux-navigator'
+
+" Highlighting
 Plug 'tpope/vim-rails'
 Plug 'sheerun/vim-polyglot'
 
+" Yanking in a Codespace
 Plug 'ojroques/vim-oscyank', {'branch': 'main'}
 call plug#end()
+
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
 
 let g:ruby_path = '/Users/mockra/.rbenv/shims/ruby'
 
