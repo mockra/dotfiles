@@ -42,16 +42,8 @@ fi
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 
-if [ -n "${CODESPACES}" ]; then
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-fi
-
 if which rbvenv >/dev/null; then
   eval "$(rbenv init -)"
-fi
-
-if [[ $GITHUB_REPOSITORY == "github/github" ]]; then
-  export PATH=$(/workspaces/github/bin/npm bin -g):$PATH
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
