@@ -19,7 +19,7 @@ Plug 'gfanto/fzf-lsp.nvim', { 'branch': 'main' }
 Plug 'nvim-lua/plenary.nvim'
 
 " Autocomplete
-Plug 'ervandew/supertab'
+Plug 'github/copilot.vim', { 'branch': 'main' }
 
 " Basic vim tools
 Plug 'tpope/vim-sensible'
