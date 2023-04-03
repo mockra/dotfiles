@@ -42,8 +42,7 @@ fi
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 
-if which rbvenv >/dev/null; then
-  eval "$(rbenv init -)"
-fi
+eval "$(rbenv init -)"
+eval "$(nodenv init -)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
