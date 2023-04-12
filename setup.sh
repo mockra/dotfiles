@@ -28,6 +28,10 @@ rm -rf $HOME/.fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf
 $HOME/.fzf/install --all
 
+# Install nodenv
+git clone https://github.com/nodenv/node-build.git /usr/local/.nodenv/plugins/node-build
+nodenv install 16.0.0
+
 ## Link Dotfiles
 mkdir -p $HOME/.config/nvim
 
