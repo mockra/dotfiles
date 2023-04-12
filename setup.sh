@@ -12,7 +12,7 @@ sudo apt-get --assume-yes install silversearcher-ag fuse
 sudo modprobe fuse
 sudo groupadd fuse
 sudo usermod -a -G fuse "$(whoami)"
-wget https://github.com/neovim/neovim/releases/download/v0.7.2/nvim.appimage
+wget https://github.com/neovim/neovim/releases/download/v0.9.0/nvim.appimage
 sudo chmod u+x nvim.appimage
 sudo mv nvim.appimage /usr/local/bin/nvim
 
@@ -31,6 +31,7 @@ $HOME/.fzf/install --all
 # Install nodenv
 git clone https://github.com/nodenv/node-build.git /usr/local/.nodenv/plugins/node-build
 nodenv install 16.0.0
+nodenv global 16.0.0
 
 ## Link Dotfiles
 mkdir -p $HOME/.config/nvim
@@ -46,6 +47,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 ### Install NeoVim plugins
-nvim --headless +PlugInstall +qa
+echo 'let g:copilot_node_comment = "/usr/local/.nodenv/shims/node"' > ~/.vimrc
+nvim --headless +PlugInstall +Copilot setup +qa
 
 sudo chsh -s "$(which zsh)" "$(whoami)"
