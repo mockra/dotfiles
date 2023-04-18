@@ -47,7 +47,6 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 ### Install NeoVim plugins
-echo 'let g:copilot_node_comment = "/usr/local/.nodenv/shims/node"' >> ~/.vimrc
-nvim --headless +PlugInstall +Copilot setup +qa
+nvim --headless +PlugInstall +qa
 
 sudo chsh -s "$(which zsh)" "$(whoami)"
