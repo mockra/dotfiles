@@ -149,11 +149,10 @@ map <leader>g :%s/\<<C-r><C-w>\>/
 map <leader>p :r !pbpaste<cr>
 map <leader>D :call delete(expand('%')) \| bdelete!<cr>
 map <leader>s :%sort<cr>
-map <leader>y "*y<cr>
 map <leader>q :q<cr>
 map <leader>h :s/:\([^ ]*\)\(\s*\)=>/\1:/g<cr>
 map <leader>o :Goyo<cr>
-vnoremap <leader>y :OSCYank<CR>
+vnoremap <leader>y :OSCYankVisual<CR>
 nnoremap <leader>yf :let @*=expand("%")<CR>
 
 nmap <silent> <leader>t :w \| :TestNearest \| :VimuxZoomRunner<CR>
