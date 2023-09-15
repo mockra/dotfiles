@@ -32,5 +32,13 @@ config.keys = {
   },
 }
 
+config.mouse_bindings = {
+  {
+    event = { Up = { streak = 1, button = 'Left' } },
+    mods = 'CTRL',
+    action = wezterm.action.OpenLinkAtMouseCursor,
+  },
+}
+
 -- and finally, return the configuration to wezterm
 return config
