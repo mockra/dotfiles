@@ -46,7 +46,7 @@ if which rbvenv >/dev/null; then
   eval "$(rbenv init -)"
 fi
 
-if which rbvenv >/dev/null; then
+if which nodenv >/dev/null; then
   eval "$(nodenv init -)"
 fi
 
