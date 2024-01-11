@@ -42,8 +42,8 @@ fi
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 
-if which rbvenv >/dev/null; then
-  eval "$(rbenv init -)"
+if which rbenv >/dev/null; then
+  eval "$(rbenv init - zsh)"
 fi
 
 if which nodenv >/dev/null; then
@@ -51,3 +51,4 @@ if which nodenv >/dev/null; then
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
