@@ -6,7 +6,7 @@ set -x
 
 # Install Packages
 sudo apt-get update -y
-sudo apt-get --assume-yes install silversearcher-ag fuse
+sudo apt-get --assume-yes install silversearcher-ag fuse ripgrep
 
 # Install neovim
 sudo modprobe fuse

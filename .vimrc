@@ -18,6 +18,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'gfanto/fzf-lsp.nvim', { 'branch': 'main' }
 Plug 'nvim-lua/plenary.nvim'
 
+" Find/replace
+Plug 'nvim-pack/nvim-spectre'
+
 " Autocomplete
 Plug 'ervandew/supertab'
 
