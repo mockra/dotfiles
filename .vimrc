@@ -158,6 +158,8 @@ map <leader>o :Goyo<cr>
 vnoremap <leader>y :OSCYankVisual<CR>
 nnoremap <leader>yf :let @*=expand("%")<CR>
 
+vnoremap <leader>s <esc>:lua require('spectre').open_visual()<CR>
+
 nmap <silent> <leader>t :w \| :TestNearest \| :VimuxZoomRunner<CR>
 nmap <silent> <leader>T :w \| :TestFile \| :VimuxZoomRunner<CR>
 nmap :W :w
