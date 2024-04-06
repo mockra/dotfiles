@@ -70,6 +70,9 @@ require("lazy").setup({
   "ibhagwan/fzf-lua",
 })
 
+-- FZF config
+require('fzf-lua').setup({'fzf-vim'})
+
 -- Key mappings
 require('mapx').setup{ global = true }
 
@@ -98,9 +101,9 @@ nmap(":Q!", ":q!")
 nmap(":Wq!", ":wq!")
 nmap(":WQ!", ":wq!")
 
-map("<leader>f", ":FzfLua live_grep<cr>")
-nnoremap("go", ":FzfLua files<CR>", "silent")
-nnoremap("gr", ":FzfLua oldfiles<CR>", "silent")
+map("<leader>f", ":RG<cr>")
+nnoremap("go", ":Files<CR>", "silent")
+nnoremap("gr", ":History<CR>", "silent")
 
 map("<Leader>z", ":VimuxZoomRunner<CR>")
 
