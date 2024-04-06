@@ -12,40 +12,69 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+  -- Git + Hub Commands, e.g. :Git blame
   "tpope/vim-git",
   "tpope/vim-fugitive",
   "tpope/vim-rhubarb",
+
+  -- LSP Setup
   "neovim/nvim-lspconfig",
   "nvim-lua/plenary.nvim",
+
+  -- Find/replace
   "nvim-pack/nvim-spectre",
+
+  -- Autocomplete
   "ervandew/supertab",
+
+  -- Basic vim tools
   "tpope/vim-sensible",
   "tpope/vim-endwise",
   "tpope/vim-surround",
   "tpope/vim-eunuch",
+
+  -- Jump around: \\w
   "Lokaltog/vim-easymotion",
+
+  -- Easily create files: :e
   "dockyard/vim-easydir",
+
+  -- Show changed lines
   "airblade/vim-gitgutter",
+
+  -- Themeing
   "itchyny/lightline.vim",
   "edkolev/tmuxline.vim",
   { "folke/tokyonight.nvim", branch = "main" },
+
+  -- Testing
   "janko-m/vim-test",
-  "bswinnerton/vim-test-github",
   "benmills/vimux",
   "christoomey/vim-tmux-navigator",
+
+  -- Language stuff
   "tpope/vim-rails",
   "sheerun/vim-polyglot",
+
+  -- Make yanking work
   { "ojroques/vim-oscyank", branch = "main" },
+
+  -- Easy lua mapping for vim
   "b0o/mapx.nvim",
-  { 'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
-  { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' },
+
+  -- Clear search highlighting
+  "romainl/vim-cool",
+
+  -- Search/fuzzy find window
+  { "junegunn/fzf", build = "./install --bin" },
+  "ibhagwan/fzf-lua",
 })
 
-require'mapx'.setup{ global = true }
+-- Key mappings
+require('mapx').setup{ global = true }
 
 map("<leader>bi", ":!bundle install<cr>")
 map("<leader>v", ":vsplit<cr>")
-map("<leader>f", ":Ag<cr>")
 map("<leader>a", ":A<cr>")
 map("<leader>w", ":w<cr>")
 map("<leader>g", ":%s/\\<<C-r><C-w>\\>/")
@@ -60,8 +89,8 @@ nnoremap("<leader>yf", ":let @*=expand('%')<CR>")
 
 vnoremap("<leader>s", "<esc>:lua require('spectre').open_visual()<CR>")
 
--- nmap("<silent> <leader>t", ":w \| :TestNearest \| :VimuxZoomRunner<CR>")
--- nmap("<silent> <leader>T", ":w \| :TestFile \| :VimuxZoomRunner<CR>")
+nmap("<leader>t", ":w | :TestNearest | :VimuxZoomRunner<CR>", "silent")
+map("<leader>T", ":w | :TestFile | :VimuxZoomRunner<CR>", "silent")
 nmap(":W", ":w")
 nmap(":W!", ":w!")
 nmap(":Q", ":q")
@@ -69,29 +98,27 @@ nmap(":Q!", ":q!")
 nmap(":Wq!", ":wq!")
 nmap(":WQ!", ":wq!")
 
-nnoremap("go", ":Telescope find_files<CR>", "silent")
-nnoremap("gr", ":Telescope search_history<CR>", "silent")
+map("<leader>f", ":FzfLua live_grep<cr>")
+nnoremap("go", ":FzfLua files<CR>", "silent")
+nnoremap("gr", ":FzfLua oldfiles<CR>", "silent")
 
 map("<Leader>z", ":VimuxZoomRunner<CR>")
 
-vim.go.VimuxHeight = "10"
-vim.go.ruby_path = "/Users/mockra/.rbenv/shims/ruby"
+vim.g.VimuxHeight = "10"
+vim.g.ruby_path = "/Users/mockra/.rbenv/shims/ruby"
 
-vim.go["test#javascript#mocha#options"] = "-A --compilers js:babel-register"
-vim.go["test#runners"] = "{ Ruby = { 'GitHub' } }"
-vim.go["test#strategy"] = "vimux"
-vim.go["test#ruby#rspec#executable"] = "script/test"
+vim.o["test#javascript#mocha#options"] = "-A --compilers js:babel-register"
+vim.o["test#strategy"] = "vimux"
+vim.o["test#ruby#rspec#executable"] = "script/test"
 
-vim.go.ruby_indent_block_style = 'do'
-vim.go.ruby_indent_assignment_style = 'variable'
+vim.g.ruby_indent_block_style = 'do'
+vim.g.ruby_indent_assignment_style = 'variable'
 
-vim.go.tokyonight_style = "moon"
-vim.go.tokyonight_enable_italic = 1
-vim.go.tmuxline_preset = "nightly_fox"
+vim.g.tokyonight_style = "moon"
+vim.g.tokyonight_enable_italic = 1
+vim.g.tmuxline_preset = "nightly_fox"
 
-vim.go.lightline = [[{
-  'colorscheme': 'tokyonight'
-}]]
+vim.g.lightline = { colorscheme = 'tokyonight' }
 
 vim.cmd [[colorscheme tokyonight-moon]]
 vim.cmd [[set termguicolors]]
