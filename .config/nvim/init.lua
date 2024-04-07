@@ -35,6 +35,7 @@ require("lazy").setup({
   'hrsh7th/cmp-vsnip',
   'hrsh7th/vim-vsnip',
   'hrsh7th/cmp-git',
+  "rafamadriz/friendly-snippets",
 
   -- Copilot
   "zbirenbaum/copilot.lua",

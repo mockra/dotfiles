@@ -1,11 +1,12 @@
 -- CMP
 local cmp = require'cmp'
 
+vim.g.vsnip_filetypes.ruby = { 'rails' }
+
 cmp.setup({
   snippet = {
     expand = function(args)
       vim.fn["vsnip#anonymous"](args.body)
-      vim.snippet.expand(args.body)
     end,
   },
   window = {
