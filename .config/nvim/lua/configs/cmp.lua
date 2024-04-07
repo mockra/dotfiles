@@ -61,3 +61,38 @@ cmp.setup.cmdline(':', {
     }),
   matching = { disallow_symbol_nonprefix_matching = false }
 })
+
+local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+local default_setup = function(server)
+  require('lspconfig')[server].setup({
+    capabilities = lsp_capabilities,
+  })
+end
+
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  ensure_installed = {"ruby_ls"},
+  handlers = {
+    default_setup,
+  },
+})
+
+require('lspconfig').lua_ls.setup({
+  capabilities = lsp_capabilities,
+  settings = {
+    Lua = {
+      runtime = {
+        version = 'LuaJIT'
+      },
+      diagnostics = {
+        globals = {'vim'},
+      },
+      workspace = {
+        library = {
+          vim.env.VIMRUNTIME,
+        }
+      }
+    }
+  }
+})
