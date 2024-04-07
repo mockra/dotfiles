@@ -38,6 +38,8 @@ require("lazy").setup({
   'hrsh7th/cmp-vsnip',
   'hrsh7th/vim-vsnip',
   'hrsh7th/cmp-git',
+  'delphinus/cmp-ctags',
+  'ludovicchabant/vim-gutentags',
 
   -- Basic vim tools
   "tpope/vim-sensible",

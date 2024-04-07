@@ -6,7 +6,7 @@ set -x
 
 # Install Packages
 sudo apt-get update -y
-sudo apt-get --assume-yes install silversearcher-ag fuse ripgrep
+sudo apt-get --assume-yes install silversearcher-ag fuse ripgrep universal-ctags
 
 # Install neovim
 sudo modprobe fuse

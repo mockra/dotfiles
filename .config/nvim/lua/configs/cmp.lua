@@ -22,8 +22,6 @@ cmp.setup({
       if cmp.visible() then
         cmp.select_next_item()
         cmp.confirm({ select = true})
-      elseif luasnip.expand_or_jumpable() then
-        luasnip.expand_or_jump()
       else
         fallback()
       end
@@ -32,6 +30,8 @@ cmp.setup({
   sources = cmp.config.sources({
       { name = 'nvim_lsp' },
       { name = 'vsnip' },
+    }, {
+      { name = 'ctags' },
     }, {
       { name = 'buffer' },
     })
