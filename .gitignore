@@ -24,3 +24,4 @@
 !setup.sh
 !tokyoday.itermcolors
 !.wezterm.lua
+!.config/nvim/init.lua
