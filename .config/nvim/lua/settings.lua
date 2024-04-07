@@ -15,6 +15,8 @@ vim.g.tmuxline_preset = "nightly_fox"
 
 vim.g.lightline = { colorscheme = 'tokyonight' }
 
+vim.g["$FZF_DEFAULT_COMMAND"] = 'ag --hidden --ignore .git -l -g ""'
+
 vim.cmd [[colorscheme tokyonight-moon]]
 vim.cmd [[set termguicolors]]
 vim.cmd [[set shell=bash]]

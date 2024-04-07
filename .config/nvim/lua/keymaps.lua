@@ -26,9 +26,9 @@ nmap(":Q!", ":q!")
 nmap(":Wq!", ":wq!")
 nmap(":WQ!", ":wq!")
 
-map("<leader>f", ":Telescope live_grep<cr>")
-nnoremap("go", ":Telescope find_files shorten_path=true<CR>", "silent")
-nnoremap("gr", ":Telescope oldfiles<CR>", "silent")
+map("<leader>f", ":Ag<cr>")
+nnoremap("go", ":Files<CR>", "silent")
+nnoremap("gr", ":History<CR>", "silent")
 
 map("<Leader>z", ":VimuxZoomRunner<CR>")
 map("<leader>n", ":Rename ")

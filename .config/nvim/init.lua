@@ -23,6 +23,10 @@ require("lazy").setup({
   -- Find/replace
   "nvim-pack/nvim-spectre",
 
+  -- FZF Fuzzy Search
+  'junegunn/fzf',
+  'junegunn/fzf.vim',
+
   -- Autocomplete
   'hrsh7th/cmp-buffer',
   'hrsh7th/cmp-path',
@@ -80,24 +84,24 @@ require("lazy").setup({
   "romainl/vim-cool",
 
   -- Search/fuzzy find window
-  "kelly-lin/telescope-ag",
-  "nvim-telescope/telescope-live-grep-args.nvim",
-  { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
-  { 'nvim-telescope/telescope.nvim',
-    dependencies = { 'nvim-lua/plenary.nvim' },
-    opts = function()
-      return require "configs.telescope"
-    end,
-    config = function(_, opts)
-      local telescope = require "telescope"
-      telescope.setup(opts)
+  --"kelly-lin/telescope-ag",
+  --"nvim-telescope/telescope-live-grep-args.nvim",
+  --{ 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+  --{ 'nvim-telescope/telescope.nvim',
+  --  dependencies = { 'nvim-lua/plenary.nvim' },
+  --  opts = function()
+  --    return require "configs.telescope"
+  --  end,
+  --  config = function(_, opts)
+  --    local telescope = require "telescope"
+  --    telescope.setup(opts)
 
-      -- load extensions
-      for _, ext in ipairs(opts.extensions_list) do
-        telescope.load_extension(ext)
-      end
-    end,
-  },
+  --    -- load extensions
+  --    for _, ext in ipairs(opts.extensions_list) do
+  --      telescope.load_extension(ext)
+  --    end
+  --  end,
+  --},
 })
 
 require("settings")
