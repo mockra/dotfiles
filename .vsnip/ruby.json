@@ -1,0 +1,10 @@
+{
+  "Initkwarg": {
+    "prefix": "initkwarg",
+    "body": [
+      "\tdef initalize(${1}:)",
+      "\t\t@$1 = $1",
+      "\tend"
+    ]
+  }
+}

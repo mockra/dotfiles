@@ -1,4 +1,3 @@
-
 vim.g.VimuxHeight = "10"
 vim.g.ruby_path = "/Users/mockra/.rbenv/shims/ruby"
 
@@ -14,8 +13,6 @@ vim.g.tokyonight_enable_italic = 1
 vim.g.tmuxline_preset = "nightly_fox"
 
 vim.g.lightline = { colorscheme = 'tokyonight' }
-
-vim.g["$FZF_DEFAULT_COMMAND"] = 'ag --hidden --ignore .git -l -g ""'
 
 vim.cmd [[colorscheme tokyonight-day]]
 vim.cmd [[set termguicolors]]

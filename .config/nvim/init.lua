@@ -32,9 +32,10 @@ require("lazy").setup({
   'hrsh7th/cmp-path',
   'hrsh7th/cmp-cmdline',
   'hrsh7th/nvim-cmp',
+  'hrsh7th/cmp-git',
+  -- Autocomplete Snippets
   'hrsh7th/cmp-vsnip',
   'hrsh7th/vim-vsnip',
-  'hrsh7th/cmp-git',
   "rafamadriz/friendly-snippets",
 
   -- Copilot
