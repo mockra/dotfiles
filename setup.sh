@@ -6,7 +6,7 @@ set -x
 
 # Install Packages
 sudo apt-get update -y
-sudo apt-get --assume-yes install silversearcher-ag fuse ripgrep
+sudo apt-get --assume-yes install silversearcher-ag fuse ripgrep universal-ctags
 
 # Install neovim
 sudo modprobe fuse
@@ -47,6 +47,6 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 ### Install NeoVim plugins
-nvim --headless +PlugInstall +qa
+nvim --headless "+Lazy! sync" +qa
 
 sudo chsh -s "$(which zsh)" "$(whoami)"
