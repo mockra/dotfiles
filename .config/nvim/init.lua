@@ -17,8 +17,7 @@ require("lazy").setup({
   "tpope/vim-fugitive",
   "tpope/vim-rhubarb",
 
-  -- LSP Setup
-  "neovim/nvim-lspconfig",
+  -- Dependencies
   "nvim-lua/plenary.nvim",
 
   -- Find/replace
@@ -28,9 +27,6 @@ require("lazy").setup({
   -- "ervandew/supertab",
 
   -- Autocomplete
-  "williamboman/mason.nvim",
-  "williamboman/mason-lspconfig.nvim",
-  'hrsh7th/cmp-nvim-lsp',
   'hrsh7th/cmp-buffer',
   'hrsh7th/cmp-path',
   'hrsh7th/cmp-cmdline',
