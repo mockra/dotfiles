@@ -30,7 +30,7 @@ cmp.setup({
   sources = cmp.config.sources({
       { name = 'vsnip' },
     }, {
-      { name = 'ctags' },
+      { name = 'copilot' },
     }, {
       { name = 'buffer' },
     })
@@ -59,4 +59,9 @@ cmp.setup.cmdline(':', {
       { name = 'cmdline' }
     }),
   matching = { disallow_symbol_nonprefix_matching = false }
+})
+
+require("copilot").setup({
+  suggestion = { enabled = false },
+  panel = { enabled = false },
 })

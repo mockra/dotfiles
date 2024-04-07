@@ -24,9 +24,6 @@ require("lazy").setup({
   "nvim-pack/nvim-spectre",
 
   -- Autocomplete
-  -- "ervandew/supertab",
-
-  -- Autocomplete
   'hrsh7th/cmp-buffer',
   'hrsh7th/cmp-path',
   'hrsh7th/cmp-cmdline',
@@ -34,8 +31,15 @@ require("lazy").setup({
   'hrsh7th/cmp-vsnip',
   'hrsh7th/vim-vsnip',
   'hrsh7th/cmp-git',
-  'delphinus/cmp-ctags',
-  'ludovicchabant/vim-gutentags',
+
+  -- Copilot
+  "zbirenbaum/copilot.lua",
+  {
+    "zbirenbaum/copilot-cmp",
+    config = function ()
+      require("copilot_cmp").setup()
+    end
+  },
 
   -- Basic vim tools
   "tpope/vim-sensible",
