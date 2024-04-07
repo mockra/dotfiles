@@ -9,7 +9,7 @@ vim.o["test#ruby#rspec#executable"] = "script/test"
 vim.g.ruby_indent_block_style = 'do'
 vim.g.ruby_indent_assignment_style = 'variable'
 
-vim.g.tokyonight_style = "moon"
+vim.g.tokyonight_style = "day"
 vim.g.tokyonight_enable_italic = 1
 vim.g.tmuxline_preset = "nightly_fox"
 
@@ -17,7 +17,7 @@ vim.g.lightline = { colorscheme = 'tokyonight' }
 
 vim.g["$FZF_DEFAULT_COMMAND"] = 'ag --hidden --ignore .git -l -g ""'
 
-vim.cmd [[colorscheme tokyonight-moon]]
+vim.cmd [[colorscheme tokyonight-day]]
 vim.cmd [[set termguicolors]]
 vim.cmd [[set shell=bash]]
 vim.cmd [[set encoding=utf-8]]
@@ -55,3 +55,27 @@ vim.cmd("set complete=.,w,t")
 vim.cmd("set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*/node_modules/*")
 
 vim.cmd("set inccommand=split")
+
+vim.env.FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
+-- Tokyonight-moon colors
+--vim.env.FZF_DEFAULT_OPTS = [[
+----border
+----color=fg:#c8d3f5,bg:#222436,hl:#ff966c
+----color=fg+:#c8d3f5,bg+:#2f334d,hl+:#ff966c
+----color=info:#82aaff,prompt:#86e1fc,pointer:#86e1fc
+----color=marker:#c3e88d,spinner:#c3e88d,header:#c3e88d
+--]]
+
+-- Tokyonight-day colors
+vim.env.FZF_DEFAULT_OPTS = [[
+--border
+--color=fg:#3760bf,bg:#e1e2e7,hl:#b15c00
+--color=fg+:#3760bf,bg+:#c4c8da,hl+:#b15c00
+--color=info:#2e7de9,prompt:#007197,pointer:#007197
+--color=marker:#587539,spinner:#587539,header:#587539
+]]
+
+vim.g.fzf_colors = {
+  hl =      { 'fg', 'Comment' },
+  ["hl+"] =     { 'fg', 'Statement' },
+ }
