@@ -1,12 +1,28 @@
 -- CMP
-local cmp = require'cmp'
+local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-vim.g.vsnip_filetypes.ruby = { 'rails' }
+local default_setup = function(server)
+  require('lspconfig')[server].setup({
+    capabilities = lsp_capabilities,
+  })
+end
+
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  ensure_installed = { "solargraph" },
+  handlers = {
+    default_setup,
+  },
+})
+
+require("luasnip.loaders.from_vscode").lazy_load()
+
+local cmp = require'cmp'
 
 cmp.setup({
   snippet = {
     expand = function(args)
-      vim.fn["vsnip#anonymous"](args.body)
+      require('luasnip').lsp_expand(args.body)
     end,
   },
   window = {
@@ -30,7 +46,7 @@ cmp.setup({
   }),
   sources = cmp.config.sources({
       { name = 'nvim_lsp' },
-      { name = 'vsnip' },
+      { name = 'luasnip' },
     }, {
       { name = 'copilot' },
     }, {
