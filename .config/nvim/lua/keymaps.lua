@@ -27,7 +27,7 @@ nmap(":Wq!", ":wq!")
 nmap(":WQ!", ":wq!")
 
 map("<leader>f", ":Telescope live_grep<cr>")
-nnnoremap("gd", ":Telescope lsp_definitions<CR>", "silent")
+nnoremap("gd", ":Telescope lsp_definitions<CR>", "silent")
 nnoremap("gr", ":Telescope lsp_references<CR>", "silent")
 nnoremap("go", ":Telescope find_files<CR>", "silent")
 nnoremap("gr", ":Telescope resume<CR>", "silent")
