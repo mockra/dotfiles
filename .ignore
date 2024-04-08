@@ -1,0 +1,15 @@
+log
+tags
+tmp
+vendor
+.git/
+bower_components/
+node_modules/
+vim/bundle/
+.bundle/
+.sass-cache/
+*.jpg
+*.gif
+*.png
+*.ico
+*.log

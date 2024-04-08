@@ -14,6 +14,7 @@
 !.vsnip/
 !.config/base16-shell
 !.agignore
+!.ignore
 !.gemrc
 !.gitignore
 !.tmux.conf

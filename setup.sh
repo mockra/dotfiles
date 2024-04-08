@@ -43,7 +43,7 @@ ln -sf $(pwd)/.config/nvim/* $HOME/.config/nvim/
 ln -sf $(pwd)/.vimrc $HOME/.vimrc
 ln -sf $(pwd)/.gitconfig $HOME/.gitconfig
 ln -sf $(pwd)/.agignore $HOME/.agignore
-ln -sf $(pwd)/.rgignore $HOME/.rgignore
+ln -sf $(pwd)/.ignore $HOME/.ignore
 
 ### Install vim-plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
