@@ -49,7 +49,7 @@ local options = {
     },
   },
 
-  extensions_list = { "ag", "fzf", "live_grep_args" },
+  extensions_list = { "fzf" },
   extensions = {
     fzf = {
       fuzzy = true,

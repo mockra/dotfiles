@@ -5,6 +5,7 @@ vendor
 .git/
 bower_components/
 node_modules/
+static_external_assets/
 vim/bundle/
 .bundle/
 .sass-cache/
