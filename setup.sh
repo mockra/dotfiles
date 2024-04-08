@@ -38,9 +38,12 @@ mkdir -p $HOME/.config/nvim
 
 ln -sf $(pwd)/.tmux.conf $HOME/.tmux.conf
 
+ln -sf $(pwd)/.vsnip/* $HOME/.vsnip/
 ln -sf $(pwd)/.config/nvim/* $HOME/.config/nvim/
 ln -sf $(pwd)/.vimrc $HOME/.vimrc
 ln -sf $(pwd)/.gitconfig $HOME/.gitconfig
+ln -sf $(pwd)/.agignore $HOME/.agignore
+ln -sf $(pwd)/.rgignore $HOME/.rgignore
 
 ### Install vim-plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
