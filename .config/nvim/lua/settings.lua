@@ -1,9 +1,9 @@
 vim.g.VimuxHeight = "10"
 vim.g.ruby_path = "/Users/mockra/.rbenv/shims/ruby"
 
-vim.o["test#javascript#mocha#options"] = "-A --compilers js:babel-register"
-vim.o["test#strategy"] = "vimux"
-vim.o["test#ruby#rspec#executable"] = "script/test"
+vim.g["test#javascript#mocha#options"] = "-A --compilers js:babel-register"
+vim.g["test#strategy"] = "vimux"
+vim.g["test#ruby#rspec#executable"] = "script/test"
 
 vim.g.ruby_indent_block_style = 'do'
 vim.g.ruby_indent_assignment_style = 'variable'
