@@ -14,11 +14,11 @@ vim.g.tmuxline_preset = "nightly_fox"
 
 vim.g.lightline = { colorscheme = 'tokyonight' }
 
+vim.cmd [[set nocompatible]]
 vim.cmd [[colorscheme tokyonight-day]]
 vim.cmd [[set termguicolors]]
 vim.cmd [[set shell=bash]]
 vim.cmd [[set encoding=utf-8]]
-vim.cmd [[set nocompatible]]
 
 vim.cmd("set t_Co=256")
 vim.cmd("set cc=+1")
