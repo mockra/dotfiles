@@ -50,7 +50,7 @@ cmp.setup({
     }, {
       { name = 'copilot' },
     }, {
-      { name = 'rg' },
+      { name = 'rg', keyword_length = 4 },
       { name = 'path' },
     }, {
       { name = 'nvim_lsp' },
