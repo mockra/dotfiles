@@ -20,6 +20,7 @@ require("luasnip.loaders.from_vscode").lazy_load()
 local cmp = require'cmp'
 
 cmp.setup({
+  preselect = cmp.PreselectMode.None,
   snippet = {
     expand = function(args)
       require('luasnip').lsp_expand(args.body)
@@ -34,7 +35,7 @@ cmp.setup({
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.abort(),
-    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    ['<CR>'] = cmp.mapping.confirm({ select = false, behavior = cmp.ConfirmBehavior.Insert }),
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
@@ -46,9 +47,11 @@ cmp.setup({
   }),
   sources = cmp.config.sources({
       { name = 'buffer' },
-      { name = 'path' },
     }, {
       { name = 'copilot' },
+    }, {
+      { name = 'rg' },
+      { name = 'path' },
     }, {
       { name = 'nvim_lsp' },
       { name = 'luasnip' },
