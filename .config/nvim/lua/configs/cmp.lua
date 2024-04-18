@@ -38,18 +38,19 @@ cmp.setup({
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
-        cmp.confirm({ select = true})
+        cmp.confirm({ select = true, behavior = cmp.ConfirmBehavior.Insert })
       else
         fallback()
       end
     end)
   }),
   sources = cmp.config.sources({
-      { name = 'nvim_lsp' },
       { name = 'buffer' },
+      { name = 'path' },
     }, {
       { name = 'copilot' },
     }, {
+      { name = 'nvim_lsp' },
       { name = 'luasnip' },
     })
   })
