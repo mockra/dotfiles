@@ -27,8 +27,6 @@ nmap(":Wq!", ":wq!")
 nmap(":WQ!", ":wq!")
 
 map("<leader>f", ":Ag<cr>")
-map("<leader>fd", ":Definitions<cr>")
-map("<leader>fr", ":References<cr>")
 nnoremap("go", ":Files<CR>", "silent")
 nnoremap("gr", ":History<CR>", "silent")
 
