@@ -67,9 +67,6 @@ require("lazy").setup({
   -- Easily create files: :e
   "dockyard/vim-easydir",
 
-  -- Show changed lines
-  "airblade/vim-gitgutter",
-
   -- Themeing
   "itchyny/lightline.vim",
   "edkolev/tmuxline.vim",
