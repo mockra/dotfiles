@@ -82,6 +82,9 @@ require("lazy").setup({
   "sheerun/vim-polyglot",
   "benmills/vim-golang-alternate",
 
+  -- Go
+  "fatih/vim-go",
+
   -- Make yanking work
   { "ojroques/vim-oscyank", branch = "main" },
 
