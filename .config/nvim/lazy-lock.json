@@ -31,7 +31,7 @@
   "vim-eunuch": { "branch": "master", "commit": "8fb3904be27b6b60d086f87c2570085902414069" },
   "vim-fugitive": { "branch": "master", "commit": "c0b03f1cac242d96837326d300f42a660306fc1a" },
   "vim-git": { "branch": "master", "commit": "105fd5559bd9df3f1204ecdcac2a587614e1a4be" },
-  "vim-gitgutter": { "branch": "main", "commit": "67ef116100b40f9ca128196504a2e0bc0a2753b0" },
+  "vim-go": { "branch": "master", "commit": "ac1fb9611de435d80a6badcf8482cb1428449b10" },
   "vim-golang-alternate": { "branch": "master", "commit": "dea8a8e9552aea33bf5f6e5420c63fc97da27c76" },
   "vim-oscyank": { "branch": "main", "commit": "c37c9d98e8a0aed749624fa14a7ece7913cf34de" },
   "vim-polyglot": { "branch": "master", "commit": "bc8a81d3592dab86334f27d1d43c080ebf680d42" },
