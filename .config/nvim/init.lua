@@ -83,7 +83,12 @@ require("lazy").setup({
   "benmills/vim-golang-alternate",
 
   -- Go
-  "fatih/vim-go",
+  {
+    "fatih/vim-go",
+    config = function()
+      vim.cmd.GoInstallBinaries()
+    end,
+  },
 
   -- Make yanking work
   { "ojroques/vim-oscyank", branch = "main" },

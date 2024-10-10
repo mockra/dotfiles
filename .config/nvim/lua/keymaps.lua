@@ -32,3 +32,6 @@ nnoremap("gr", ":History<CR>", "silent")
 
 map("<Leader>z", ":VimuxZoomRunner<CR>")
 map("<leader>n", ":Rename ")
+
+noremap("<Leader>gi", ":GoImplements<CR>")
+noremap("<Leader>gr", ":GoReferrers<CR>")
