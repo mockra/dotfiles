@@ -4,6 +4,7 @@ require('mapx').setup{ global = true }
 map("<leader>bi", ":!bundle install<cr>")
 map("<leader>v", ":vsplit<cr>")
 map("<leader>a", ":A<cr>")
+map("<leader>A", ":GoAlternate!<cr>")
 map("<leader>w", ":w<cr>")
 map("<leader>g", ":%s/\\<<C-r><C-w>\\>/")
 map("<leader>p", ":r !pbpaste<cr>")
