@@ -41,6 +41,8 @@ then
 fi
 
 export PATH="$HOME/.rbenv/bin:$PATH"
+export GOPATH="$HOME/go"
+PATH="$GOPATH/bin:$PATH"
 
 if which rbenv >/dev/null; then
   eval "$(rbenv init - zsh)"
