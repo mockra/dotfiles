@@ -1,0 +1,36 @@
+# Colors
+theme = "tokyonight_moon"
+
+# Shell
+shell-integration = zsh
+shell-integration-features = no-cursor,no-title
+working-directory = home
+
+# Other UI Customization
+cursor-style = block
+cursor-style-blink = false
+scrollback-limit = 1000000
+
+# Fonts and colors
+adjust-underline-position = 1
+adjust-cell-width = -4%
+font-thicken = true
+
+# Window style
+macos-titlebar-style = tabs
+window-theme = system
+window-colorspace = display-p3
+
+# Clipboard, mouse, keyboard
+clipboard-read = allow
+clipboard-write = allow
+mouse-hide-while-typing = true
+mouse-shift-capture = true
+
+# Necessary for zsh to respect cursor style
+shell-integration-features = no-cursor
+
+# Icon color
+macos-icon = custom-style
+macos-icon-ghost-color = 333300
+macos-icon-screen-color = 222222

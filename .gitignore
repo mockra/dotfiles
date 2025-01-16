@@ -11,6 +11,7 @@
 !.config/alacritty/
 !.config/iterm2/
 !.config/nvim/
+!.config/ghostty/
 !.vsnip/
 !.config/base16-shell
 !.agignore
