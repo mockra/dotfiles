@@ -9,7 +9,7 @@ working-directory = home
 # Other UI Customization
 cursor-style = block
 cursor-style-blink = false
-scrollback-limit = 1000000
+scrollback-limit = 100000000
 
 # Fonts and colors
 adjust-underline-position = 1
@@ -25,7 +25,7 @@ window-colorspace = display-p3
 clipboard-read = allow
 clipboard-write = allow
 mouse-hide-while-typing = true
-mouse-shift-capture = true
+mouse-shift-capture = false
 
 # Necessary for zsh to respect cursor style
 shell-integration-features = no-cursor
