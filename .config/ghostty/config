@@ -1,5 +1,5 @@
 # Colors
-theme = "tokyonight_moon"
+theme = "tokyonight-day"
 
 # Shell
 shell-integration = zsh

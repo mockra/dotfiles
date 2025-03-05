@@ -12,7 +12,7 @@ vim.g["test#javascript#jest#executable"] = 'node --experimental-vm-modules node_
 vim.g.ruby_indent_block_style = 'do'
 vim.g.ruby_indent_assignment_style = 'variable'
 
-vim.g.tokyonight_style = "moon"
+vim.g.tokyonight_style = "day"
 vim.g.tokyonight_enable_italic = 1
 vim.g.tmuxline_preset = "nightly_fox"
 
