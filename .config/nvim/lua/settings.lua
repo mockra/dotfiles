@@ -80,3 +80,19 @@ vim.g.fzf_colors = {
   hl =      { 'fg', 'Comment' },
   ["hl+"] =     { 'fg', 'Statement' },
  }
+
+ -- Function to build quickfix list from selected lines
+local function build_quickfix_list(lines)
+  local qf_entries = {}
+  for _, line in ipairs(lines) do
+    table.insert(qf_entries, { filename = line })
+  end
+  vim.fn.setqflist(qf_entries)
+  vim.cmd("copen")
+  vim.cmd("cc")
+end
+
+vim.g.fzf_action = {
+  ['ctrl-t'] = build_quickfix_list,
+}
+
