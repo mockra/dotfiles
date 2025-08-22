@@ -23,6 +23,7 @@ alias gp="g push"
 alias gup='g pull --rebase'
 alias gst='g status'
 alias gpu='g push -u origin HEAD'
+alias gra='g reset --hard'
 
 alias v='nvim'
 
