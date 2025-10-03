@@ -55,37 +55,57 @@ require("lazy").setup({
     end
   },
   {
-    "CopilotC-Nvim/CopilotChat.nvim",
-    dependencies = {
-      { "zbirenbaum/copilot.lua" },
-      { "nvim-lua/plenary.nvim", branch = "master" },
-    },
-    build = "make tiktoken",
+    "folke/sidekick.nvim",
     opts = {
-      model = "claude-3.5-sonnet",
-    },
-    cmd = {
-      "CopilotChat",
-      "CopilotChatToggle",
-      "CopilotChatAgents",
-      "CopilotChatModels",
-      "CopilotChatExplain",
-      "CopilotChatReview",
-      "CopilotChatFix",
-      "CopilotChatOptimize",
-      "CopilotChatDocs",
-      "CopilotChatTests",
-      "CopilotChatCommit",
+      cli = {
+        mux = {
+          backend = "tmux",
+          enabled = true,
+        },
+      },
     },
     keys = {
-      { "<leader>aa", "<cmd>CopilotChatToggle<CR>", desc = "Toggle AI Chat" },
-      { "<leader>ae", "<cmd>CopilotChatExplain<CR>", mode = { "v", "n" }, desc = "AI Explain" },
-      { "<leader>ar", "<cmd>CopilotChatReview<CR>", mode = { "v", "n" }, desc = "AI Review" },
-      { "<leader>af", "<cmd>CopilotChatFix<CR>", mode = { "v", "n" }, desc = "AI Fix" },
-      { "<leader>ao", "<cmd>CopilotChatOptimize<CR>", mode = { "v", "n" }, desc = "AI Optimize" },
-      { "<leader>at", "<cmd>CopilotChatTests<CR>", mode = { "v", "n" }, desc = "AI Tests" },
-      { "<leader>am", "<cmd>CopilotChatModels<CR>", mode = { "v", "n" }, desc = "AI Models" },
-      { "<leader>ax", "<cmd>CopilotChatReset<CR>", desc = "AI Chat Reset" },
+      {
+        "<leader>aa",
+        function() require("sidekick.cli").toggle() end,
+        desc = "Sidekick Toggle CLI",
+      },
+      {
+        "<leader>as",
+        function() require("sidekick.cli").select() end,
+        -- Or to select only installed tools:
+        -- require("sidekick.cli").select({ filter = { installed = true } })
+        desc = "Select CLI",
+      },
+      {
+        "<leader>at",
+        function() require("sidekick.cli").send({ msg = "{this}" }) end,
+        mode = { "x", "n" },
+        desc = "Send This",
+      },
+      {
+        "<leader>av",
+        function() require("sidekick.cli").send({ msg = "{selection}" }) end,
+        mode = { "x" },
+        desc = "Send Visual Selection",
+      },
+      {
+        "<leader>ap",
+        function() require("sidekick.cli").prompt() end,
+        mode = { "n", "x" },
+        desc = "Sidekick Select Prompt",
+      },
+      {
+        "<c-.>",
+        function() require("sidekick.cli").focus() end,
+        mode = { "n", "x", "i", "t" },
+        desc = "Sidekick Switch Focus",
+      },
+      {
+        "<leader>ac",
+        function() require("sidekick.cli").toggle({ name = "copilot", focus = true }) end,
+        desc = "Sidekick Toggle Copilot",
+      },
     },
   },
 
