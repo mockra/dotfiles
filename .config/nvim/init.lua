@@ -27,33 +27,58 @@ require("lazy").setup({
   'junegunn/fzf',
   'junegunn/fzf.vim',
 
-  -- Autocomplete
-  'hrsh7th/cmp-buffer',
-  'hrsh7th/cmp-path',
-  'hrsh7th/cmp-cmdline',
-  'hrsh7th/nvim-cmp',
-  'hrsh7th/cmp-git',
-  "lukas-reineke/cmp-rg",
+  -- Blink
+  {
+  "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    opts = {
+      suggestion = { enabled = false },
+      panel = { enabled = false },
+      filetypes = {
+        markdown = true,
+        help = true,
+      },
+    },
+  },
+  {
+    'saghen/blink.cmp',
+    version = '1.*',
+    dependencies = { "fang2hou/blink-copilot" },
+    opts = {
+      keymap = { preset = 'super-tab' },
+      appearance = {
+        nerd_font_variant = 'mono'
+      },
+      completion = { documentation = { auto_show = false } },
+      sources = {
+        default = { 'copilot', 'path', 'snippets', 'buffer' },
+        providers = {
+          copilot = {
+            name = "copilot",
+            module = "blink-copilot",
+            score_offset = 100,
+            async = true,
+          },
+        },
+      },
+      fuzzy = { implementation = "prefer_rust_with_warning" }
+    },
+    opts_extend = { "sources.default" }
+  },
 
-  -- Autocomplete Snippets
-  "L3MON4D3/LuaSnip",
-  'saadparwaiz1/cmp_luasnip',
-  "rafamadriz/friendly-snippets",
   -- LSP
-  'neovim/nvim-lspconfig',
-  'hrsh7th/cmp-nvim-lsp',
-  "williamboman/mason.nvim",
-  "williamboman/mason-lspconfig.nvim",
+  {
+    "neovim/nvim-lspconfig",
+  },
+  {
+    -- If you are using mason.nvim, you can install copilot-language-server automatically
+    "mason-org/mason.nvim",
+    opts = { ensure_installed = { "copilot-language-server" } },
+  },
   'gfanto/fzf-lsp.nvim',
 
   -- Copilot
-  "zbirenbaum/copilot.lua",
-  {
-    "zbirenbaum/copilot-cmp",
-    config = function ()
-      require("copilot_cmp").setup()
-    end
-  },
   {
     "folke/sidekick.nvim",
     opts = {
@@ -171,7 +196,7 @@ require("lazy").setup({
   --  end,
   --},
 })
+vim.lsp.enable('copilot')
 
 require("settings")
 require("keymaps")
-require("configs/cmp")
