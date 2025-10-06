@@ -50,7 +50,17 @@ require("lazy").setup({
       appearance = {
         nerd_font_variant = 'mono'
       },
-      completion = { documentation = { auto_show = false } },
+      completion = {
+        documentation = {
+          auto_show = true,
+          auto_show_delay_ms = 500,
+          window = {
+            border = "rounded",
+            max_width = math.floor(vim.o.columns * 0.4),
+            max_height = math.floor(vim.o.lines * 0.5),
+          },
+        },
+      },
       sources = {
         default = { 'copilot', 'path', 'snippets', 'buffer' },
         providers = {
