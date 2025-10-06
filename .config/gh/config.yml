@@ -11,7 +11,7 @@ aliases:
     co: pr checkout
     dev: cs create --status -r github/github
     edu: cs create --status -r github/education-web
-    pf: cs ports forward 80:80
+    pf: cs ports forward 80:80 2206:2206 8081:8081
     pfe: cs ports forward 9461:9461
     ep: cs ports forward 9461:9461
 version: "1"
