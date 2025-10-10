@@ -6,8 +6,6 @@ vim.g["test#strategy"] = "vimux"
 vim.g["test#ruby#rspec#executable"] = "script/test"
 vim.g["test#go#gotest#executable"] = "script/test -f"
 vim.g["test#javascript#runner"] = 'jest'
--- Configure jest for ESM modules
-vim.g["test#javascript#jest#executable"] = 'node --experimental-vm-modules node_modules/jest/bin/jest.js'
 
 vim.g.ruby_indent_block_style = 'do'
 vim.g.ruby_indent_assignment_style = 'variable'
