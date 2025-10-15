@@ -35,6 +35,7 @@ require("lazy").setup({
     opts = {
       suggestion = { enabled = false },
       panel = { enabled = false },
+      nes = { enabled = false },
       filetypes = {
         markdown = true,
         help = true,
