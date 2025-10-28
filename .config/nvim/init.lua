@@ -96,6 +96,7 @@ require("lazy").setup({
   {
     "folke/sidekick.nvim",
     opts = {
+      nes = { enabled = false },
       cli = {
         mux = {
           backend = "tmux",
