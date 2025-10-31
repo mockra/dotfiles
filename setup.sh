@@ -33,6 +33,9 @@ git clone https://github.com/nodenv/node-build.git /usr/local/.nodenv/plugins/no
 nodenv install 16.0.0
 nodenv global 16.0.0
 
+# Install Copilot CLI
+npm install -g @github/copilot
+
 ## Link Dotfiles
 mkdir -p $HOME/.config/nvim
 
