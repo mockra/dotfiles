@@ -12,7 +12,7 @@ sudo apt-get --assume-yes install silversearcher-ag fuse ripgrep universal-ctags
 sudo modprobe fuse
 sudo groupadd fuse
 sudo usermod -a -G fuse "$(whoami)"
-wget https://github.com/neovim/neovim/releases/download/v0.11.4/nvim-linux-x86_64.appimage
+wget https://github.com/neovim/neovim-releases/releases/download/v0.11.4/nvim-linux-x86_64.appimage
 sudo chmod u+x nvim-linux-x86_64.appimage
 sudo mv nvim-linux-x86_64.appimage /usr/local/bin/nvim
 
