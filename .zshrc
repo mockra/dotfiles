@@ -26,6 +26,7 @@ alias gpu='g push -u origin HEAD'
 alias gra='g reset --hard'
 
 alias v='nvim'
+alias m='make'
 
 alias be='bundle exec'
 alias bi='bundle install'
