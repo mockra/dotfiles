@@ -28,10 +28,10 @@ rm -rf $HOME/.fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf
 $HOME/.fzf/install --all
 
-# Install nodenv
-git clone https://github.com/nodenv/node-build.git /usr/local/.nodenv/plugins/node-build
-nodenv install 16.0.0
-nodenv global 16.0.0
+# Install node + npm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+\. "$HOME/.nvm/nvm.sh"
+nvm install 24
 
 # Install Copilot CLI
 npm install -g @github/copilot
