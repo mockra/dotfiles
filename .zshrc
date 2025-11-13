@@ -37,6 +37,9 @@ alias t="tmux"
 alias tn="t new -t"
 alias ta="t attach -t"
 
+# GitHub UI
+alias memex='npm run -w @github-ui/memex'
+
 if test -e ~/.env
 then
   source ~/.env
