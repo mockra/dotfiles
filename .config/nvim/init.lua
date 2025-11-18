@@ -28,6 +28,9 @@ require("lazy").setup({
   'junegunn/fzf',
   'junegunn/fzf.vim',
 
+  -- Personal Plugins
+  'mockra/commit-mates',
+
   -- Blink
   {
   "zbirenbaum/copilot.lua",
