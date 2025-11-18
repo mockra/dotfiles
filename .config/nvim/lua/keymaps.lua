@@ -13,6 +13,7 @@ map("<leader>s", ":%sort<cr>")
 map("<leader>q", ":q<cr>")
 map("<leader>h", ":s/:\\([^ ]*\\)\\(\\s*\\)=>/\\1:/g<cr>")
 map("<leader>o", ":Goyo<cr>")
+map("<leader>cm", ":CommitMates<cr>")
 vnoremap("<leader>y", ":OSCYankVisual<CR>")
 nnoremap("<leader>yf", ":let @*=expand('%')<CR>")
 
