@@ -209,6 +209,29 @@ require("lazy").setup({
   "sheerun/vim-polyglot",
   "benmills/vim-golang-alternate",
 
+  -- Formatting
+  {
+    'stevearc/conform.nvim',
+    opts = {
+      format_on_save = {
+        timeout_ms = 2000,
+        lsp_format = "fallback",
+      },
+      formatters_by_ft = {
+        javascript = { "prettier" },
+        typescript = { "prettier" },
+        javascriptreact = { "prettier" },
+        typescriptreact = { "prettier" },
+      },
+    },
+    formatters = {
+      prettier = {
+        command = "prettier",
+        args = { "--stdin-filepath", "$FILENAME" },
+      },
+    },
+  },
+
   -- Go
   {
     "fatih/vim-go",
