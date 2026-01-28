@@ -25,15 +25,15 @@ require("lazy").setup({
   "nvim-pack/nvim-spectre",
 
   -- FZF Fuzzy Search
-  'junegunn/fzf',
-  'junegunn/fzf.vim',
+  "junegunn/fzf",
+  "junegunn/fzf.vim",
 
   -- Personal Plugins
-  'mockra/commit-mates',
+  "mockra/commit-mates",
 
   -- Blink
   {
-  "zbirenbaum/copilot.lua",
+    "zbirenbaum/copilot.lua",
     cmd = "Copilot",
     event = "InsertEnter",
     opts = {
@@ -47,13 +47,13 @@ require("lazy").setup({
     },
   },
   {
-    'saghen/blink.cmp',
-    version = '1.*',
+    "saghen/blink.cmp",
+    version = "1.*",
     dependencies = { "fang2hou/blink-copilot" },
     opts = {
-      keymap = { preset = 'super-tab' },
+      keymap = { preset = "super-tab" },
       appearance = {
-        nerd_font_variant = 'mono'
+        nerd_font_variant = "mono",
       },
       completion = {
         documentation = {
@@ -70,7 +70,7 @@ require("lazy").setup({
         },
       },
       sources = {
-        default = { 'copilot', 'path', 'snippets', 'buffer' },
+        default = { "copilot", "path", "snippets", "buffer" },
         providers = {
           copilot = {
             name = "copilot",
@@ -80,9 +80,9 @@ require("lazy").setup({
           },
         },
       },
-      fuzzy = { implementation = "prefer_rust_with_warning" }
+      fuzzy = { implementation = "prefer_rust_with_warning" },
     },
-    opts_extend = { "sources.default" }
+    opts_extend = { "sources.default" },
   },
 
   -- LSP
@@ -94,7 +94,7 @@ require("lazy").setup({
     "mason-org/mason.nvim",
     opts = { ensure_installed = { "copilot-language-server" } },
   },
-  'gfanto/fzf-lsp.nvim',
+  "gfanto/fzf-lsp.nvim",
 
   -- Copilot
   {
@@ -111,43 +111,57 @@ require("lazy").setup({
     keys = {
       {
         "<leader>aa",
-        function() require("sidekick.cli").toggle() end,
+        function()
+          require("sidekick.cli").toggle()
+        end,
         desc = "Sidekick Toggle CLI",
       },
       {
         "<leader>as",
-        function() require("sidekick.cli").select() end,
+        function()
+          require("sidekick.cli").select()
+        end,
         -- Or to select only installed tools:
         -- require("sidekick.cli").select({ filter = { installed = true } })
         desc = "Select CLI",
       },
       {
         "<leader>at",
-        function() require("sidekick.cli").send({ msg = "{this}" }) end,
+        function()
+          require("sidekick.cli").send({ msg = "{this}" })
+        end,
         mode = { "x", "n" },
         desc = "Send This",
       },
       {
         "<leader>av",
-        function() require("sidekick.cli").send({ msg = "{selection}" }) end,
+        function()
+          require("sidekick.cli").send({ msg = "{selection}" })
+        end,
         mode = { "x" },
         desc = "Send Visual Selection",
       },
       {
         "<leader>ap",
-        function() require("sidekick.cli").prompt() end,
+        function()
+          require("sidekick.cli").prompt()
+        end,
         mode = { "n", "x" },
         desc = "Sidekick Select Prompt",
       },
       {
         "<c-.>",
-        function() require("sidekick.cli").focus() end,
+        function()
+          require("sidekick.cli").focus()
+        end,
         mode = { "n", "x", "i", "t" },
         desc = "Sidekick Switch Focus",
       },
       {
         "<leader>ac",
-        function() require("sidekick.cli").toggle({ name = "copilot", focus = true }) end,
+        function()
+          require("sidekick.cli").toggle({ name = "copilot", focus = true })
+        end,
         desc = "Sidekick Toggle Copilot",
       },
     },
@@ -177,26 +191,26 @@ require("lazy").setup({
   -- Navigation between tmux and vim splits
   "christoomey/vim-tmux-navigator",
   {
-    'christoomey/vim-tmux-navigator',
+    "christoomey/vim-tmux-navigator",
     cmd = {
-      'TmuxNavigateLeft',
-      'TmuxNavigateDown',
-      'TmuxNavigateUp',
-      'TmuxNavigateRight',
-      'TmuxNavigatePrevious',
-      'TmuxNavigatorProcessList',
+      "TmuxNavigateLeft",
+      "TmuxNavigateDown",
+      "TmuxNavigateUp",
+      "TmuxNavigateRight",
+      "TmuxNavigatePrevious",
+      "TmuxNavigatorProcessList",
     },
     keys = {
-      { mode = 'n', '<c-h>', '<cmd>TmuxNavigateLeft<cr>' },
-      { mode = 'n', '<c-j>', '<cmd>TmuxNavigateDown<cr>' },
-      { mode = 'n', '<c-k>', '<cmd>TmuxNavigateUp<cr>' },
-      { mode = 'n', '<c-l>', '<cmd>TmuxNavigateRight<cr>' },
-      { mode = 'n', '<c-\\>', '<cmd>TmuxNavigatePrevious<cr>' },
-      { mode = 't', '<c-h>', '<C-w><cmd>TmuxNavigateLeft<cr>' },
-      { mode = 't', '<c-j>', '<C-w><cmd>TmuxNavigateDown<cr>' },
-      { mode = 't', '<c-k>', '<C-w><cmd>TmuxNavigateUp<cr>' },
-      { mode = 't', '<c-l>', '<C-w><cmd>TmuxNavigateRight<cr>' },
-      { mode = 't', '<c-\\>', '<C-w><cmd>TmuxNavigatePrevious<cr>' },
+      { mode = "n", "<c-h>", "<cmd>TmuxNavigateLeft<cr>" },
+      { mode = "n", "<c-j>", "<cmd>TmuxNavigateDown<cr>" },
+      { mode = "n", "<c-k>", "<cmd>TmuxNavigateUp<cr>" },
+      { mode = "n", "<c-l>", "<cmd>TmuxNavigateRight<cr>" },
+      { mode = "n", "<c-\\>", "<cmd>TmuxNavigatePrevious<cr>" },
+      { mode = "t", "<c-h>", "<C-w><cmd>TmuxNavigateLeft<cr>" },
+      { mode = "t", "<c-j>", "<C-w><cmd>TmuxNavigateDown<cr>" },
+      { mode = "t", "<c-k>", "<C-w><cmd>TmuxNavigateUp<cr>" },
+      { mode = "t", "<c-l>", "<C-w><cmd>TmuxNavigateRight<cr>" },
+      { mode = "t", "<c-\\>", "<C-w><cmd>TmuxNavigatePrevious<cr>" },
     },
     init = function()
       -- Disable default mappings to make it work in terminal mode
@@ -211,7 +225,7 @@ require("lazy").setup({
 
   -- Formatting
   {
-    'stevearc/conform.nvim',
+    "stevearc/conform.nvim",
     opts = {
       format_on_save = {
         timeout_ms = 2000,
@@ -268,7 +282,7 @@ require("lazy").setup({
   --  end,
   --},
 })
-vim.lsp.enable('copilot')
+vim.lsp.enable("copilot")
 
 require("settings")
 require("keymaps")
