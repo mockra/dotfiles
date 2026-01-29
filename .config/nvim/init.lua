@@ -237,6 +237,7 @@ require("lazy").setup({
         javascriptreact = { "prettier" },
         typescriptreact = { "prettier" },
         lua = { "stylua" },
+        swift = { "swift_format" },
       },
     },
     formatters = {
