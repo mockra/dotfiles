@@ -17,9 +17,7 @@ sudo chmod u+x nvim-linux-x86_64.appimage
 sudo mv nvim-linux-x86_64.appimage /usr/local/bin/nvim
 
 # Install tmux
-wget https://github.com/nelsonenzo/tmux-appimage/releases/download/3.2a/tmux.appimage
-sudo chmod u+x tmux.appimage
-sudo mv tmux.appimage /usr/local/bin/tmux
+sudo apt install -y tmux
 
 rm -f $HOME/.zshrc
 ln -sf $(pwd)/.zshrc $HOME/.zshrc
