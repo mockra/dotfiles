@@ -1,5 +1,5 @@
 -- Key mappings
-require('mapx').setup{ global = true }
+require("mapx").setup({ global = true })
 
 map("<leader>bi", ":!bundle install<cr>")
 map("<leader>v", ":vsplit<cr>")
@@ -34,6 +34,11 @@ nnoremap("gr", ":History<CR>", "silent")
 
 map("<Leader>z", ":VimuxZoomRunner<CR>")
 map("<leader>n", ":Rename ")
+
+map("<leader>ny", ":MockNotesYank<CR>")
+map("<leader>ns", ":MockNotesSave<CR>")
+map("<leader>nn", ":MockNotesNew<CR>")
+map("<leader>nf", ":MockNotesFzfFind<CR>")
 
 noremap("<Leader>gi", ":GoImplements<CR>")
 noremap("<Leader>gr", ":GoReferrers<CR>")

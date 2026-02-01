@@ -5,22 +5,22 @@ vim.g["test#javascript#mocha#options"] = "-A --compilers js:babel-register"
 vim.g["test#strategy"] = "vimux"
 vim.g["test#ruby#rspec#executable"] = "script/test"
 vim.g["test#go#gotest#executable"] = "script/test -f"
-vim.g["test#javascript#runner"] = 'jest'
+vim.g["test#javascript#runner"] = "jest"
 
-vim.g.ruby_indent_block_style = 'do'
-vim.g.ruby_indent_assignment_style = 'variable'
+vim.g.ruby_indent_block_style = "do"
+vim.g.ruby_indent_assignment_style = "variable"
 
 vim.g.tokyonight_style = "moon"
 vim.g.tokyonight_enable_italic = 1
 vim.g.tmuxline_preset = "nightly_fox"
 
-vim.g.lightline = { colorscheme = 'tokyonight' }
+vim.g.lightline = { colorscheme = "tokyonight" }
 
-vim.cmd [[set nocompatible]]
-vim.cmd [[colorscheme tokyonight-moon]]
-vim.cmd [[set termguicolors]]
-vim.cmd [[set shell=bash]]
-vim.cmd [[set encoding=utf-8]]
+vim.cmd([[set nocompatible]])
+vim.cmd([[colorscheme tokyonight-moon]])
+vim.cmd([[set termguicolors]])
+vim.cmd([[set shell=bash]])
+vim.cmd([[set encoding=utf-8]])
 
 vim.cmd("set t_Co=256")
 vim.cmd("set cc=+1")
@@ -66,11 +66,11 @@ vim.env.FZF_DEFAULT_OPTS = [[
 ]]
 
 vim.g.fzf_colors = {
-  hl =      { 'fg', 'Comment' },
-  ["hl+"] =     { 'fg', 'Statement' },
- }
+  hl = { "fg", "Comment" },
+  ["hl+"] = { "fg", "Statement" },
+}
 
- -- Function to build quickfix list from selected lines
+-- Function to build quickfix list from selected lines
 local function build_quickfix_list(lines)
   local qf_entries = {}
   for _, line in ipairs(lines) do
@@ -82,6 +82,5 @@ local function build_quickfix_list(lines)
 end
 
 vim.g.fzf_action = {
-  ['ctrl-t'] = build_quickfix_list,
+  ["ctrl-t"] = build_quickfix_list,
 }
-
