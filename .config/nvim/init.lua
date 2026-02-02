@@ -13,7 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   {
-    "mockra/mocknotes",
+    dir = "~/code/mocknotes",
     opts = {
       directory = "~/mocknotes",
       git_repo = "git@github.com:mockra/notes.git",
