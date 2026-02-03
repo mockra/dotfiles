@@ -12,14 +12,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  {
-    dir = "~/code/mocknotes",
-    opts = {
-      directory = "~/mocknotes",
-      git_repo = "git@github.com:mockra/notes.git",
-    },
-  },
-
   -- Git + Hub Commands, e.g. :Git blame
   "tpope/vim-abolish",
   "tpope/vim-git",
