@@ -3,7 +3,6 @@ vim.g.ruby_path = "/Users/mockra/.rbenv/shims/ruby"
 
 vim.g["test#javascript#mocha#options"] = "-A --compilers js:babel-register"
 vim.g["test#strategy"] = "vimux"
-vim.g["test#ruby#rspec#executable"] = "script/test"
 vim.g["test#go#gotest#executable"] = "script/test -f"
 vim.g["test#javascript#runner"] = "jest"
 
