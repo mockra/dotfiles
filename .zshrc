@@ -59,3 +59,4 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
+eval "$(~/.local/bin/mise activate)"
