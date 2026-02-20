@@ -29,6 +29,7 @@ nmap(":Wq!", ":wq!")
 nmap(":WQ!", ":wq!")
 
 map("<leader>f", ":Ag<cr>")
+vnoremap("<leader>F", 'y:Ag <C-R>"<CR>')
 nnoremap("go", ":Files<CR>", "silent")
 nnoremap("gr", ":History<CR>", "silent")
 
