@@ -65,3 +65,8 @@ if command -v mise >/dev/null 2>&1; then
 elif [ -x "$HOME/.local/bin/mise" ]; then
   eval "$("$HOME/.local/bin/mise" activate zsh)"
 fi
+
+# GitHub token for devcontainer access
+if command -v gh &>/dev/null; then
+  export GITHUB_TOKEN="$(gh auth token)"
+fi
