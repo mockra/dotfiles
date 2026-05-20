@@ -54,3 +54,5 @@
   experimental = true
 [branch]
   sort = committerdate
+[safe]
+	directory = /workspaces/github
