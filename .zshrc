@@ -73,3 +73,5 @@ fi
 
 # Local scripts
 export PATH="$HOME/bin:$PATH"
+
+alias gdev='github-dev'
