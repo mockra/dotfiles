@@ -70,3 +70,6 @@ fi
 if command -v gh &>/dev/null; then
   export GITHUB_TOKEN="$(gh auth token)"
 fi
+
+# Local scripts
+export PATH="$HOME/bin:$PATH"
