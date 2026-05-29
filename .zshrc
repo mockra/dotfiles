@@ -36,6 +36,7 @@ alias bu='bundle update'
 alias t="tmux"
 alias tn="t new -t"
 alias ta="t attach -t"
+alias a="azath"
 
 # GitHub UI
 alias memex='npm run -w @github-ui/memex'
