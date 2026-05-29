@@ -12,6 +12,7 @@
 !.config/iterm2/
 !.config/nvim/
 !.config/ghostty/
+!.config/azath/
 !.vsnip/
 !.config/base16-shell
 !.agignore

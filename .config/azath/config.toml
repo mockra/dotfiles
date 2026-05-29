@@ -1,0 +1,16 @@
+# azath config
+# See: https://github.com/mockra/azath
+
+projects-root = ["~/code", "~/github"]
+
+# Hide noisy auto-discovered repos from `azath list`.
+exclude = [
+  "~/code/exercism",
+  "~/github/blog",
+  "~/github/mockra",
+]
+
+# Per-project overrides.
+
+[project.home]
+path = "~"
