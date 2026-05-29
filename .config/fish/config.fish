@@ -32,6 +32,9 @@ alias t="tmux"
 alias tn="t new -t"
 alias ta="t attach -t"
 
+# Azath
+alias a="azath"
+
 if test -e ~/.env
   source ~/.env
 end
