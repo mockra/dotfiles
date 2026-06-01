@@ -75,4 +75,7 @@ fi
 # Local scripts
 export PATH="$HOME/bin:$PATH"
 
+# Rust (rustup-managed via Homebrew)
+export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
+
 alias gdev='github-dev'
