@@ -15,3 +15,7 @@ exclude = [
 [project.home]
 path = "~"
 start-with = "shell"
+
+[project.copilot-config]
+path = "~/.copilot"
+start-with = "shell"
