@@ -53,4 +53,20 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 ### Install NeoVim plugins
 nvim --headless "+Lazy! sync" +qa
 
+## Load private dotfiles
+SECRET_REPO="${DOTFILES_SECRET_REPO:-mockra/dotfiles-secret}"
+SECRET_DIR="$HOME/dotfiles-secret"
+
+if [ -n "${GITHUB_TOKEN:-}" ]; then
+  if git clone "https://x-access-token:${GITHUB_TOKEN}@github.com/${SECRET_REPO}.git" "$SECRET_DIR" 2>/dev/null; then
+    if [ -x "$SECRET_DIR/setup.sh" ]; then
+      "$SECRET_DIR/setup.sh"
+    fi
+  else
+    echo "Skipping private dotfiles: could not clone $SECRET_REPO (grant access at https://github.com/settings/codespaces)"
+  fi
+else
+  echo "Skipping private dotfiles: GITHUB_TOKEN not set"
+fi
+
 sudo chsh -s "$(which zsh)" "$(whoami)"
