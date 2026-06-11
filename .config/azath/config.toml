@@ -19,3 +19,6 @@ start-with = "shell"
 [project.copilot-config]
 path = "~/.copilot"
 start-with = "shell"
+
+[project.prs]
+command = "oponn"
