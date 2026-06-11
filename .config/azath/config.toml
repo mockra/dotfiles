@@ -22,3 +22,7 @@ start-with = "shell"
 
 [project.prs]
 command = "oponn"
+
+[project.finnests]
+path = "~/finnests"
+start-with = "shell"
