@@ -26,7 +26,6 @@ install_system_packages() {
   sudo apt-get update -y
   sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
     curl \
-    fuse \
     ripgrep \
     silversearcher-ag \
     tmux \
@@ -36,10 +35,17 @@ install_system_packages() {
 install_neovim() {
   local version="v0.11.4"
   local arch
+  local release_repo
 
   case "$(uname -m)" in
-    x86_64 | amd64) arch="x86_64" ;;
-    aarch64 | arm64) arch="arm64" ;;
+    x86_64 | amd64)
+      arch="x86_64"
+      release_repo="neovim/neovim-releases"
+      ;;
+    aarch64 | arm64)
+      arch="arm64"
+      release_repo="neovim/neovim"
+      ;;
     *)
       echo "Unsupported architecture for Neovim: $(uname -m)" >&2
       return 1
@@ -56,7 +62,7 @@ install_neovim() {
 
   log "Installing Neovim ${version}"
   sudo mkdir -p "$install_dir"
-  curl -fsSL "https://github.com/neovim/neovim/releases/download/${version}/${archive}" |
+  curl -fsSL "https://github.com/${release_repo}/releases/download/${version}/${archive}" |
     sudo tar -xz --strip-components=1 -C "$install_dir"
   sudo ln -sfn "${install_dir}/bin/nvim" /usr/local/bin/nvim
 }
