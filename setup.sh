@@ -144,7 +144,7 @@ configure_copilot() {
 ==> Copilot config was not installed.
     Add a Codespaces secret named COPILOT_CONFIG_TOKEN with read-only Contents
     access to https://github.com/$COPILOT_CONFIG_REPO, then create a new
-    Codespace or rerun $DOTFILES_DIR/setup.sh.
+    Codespace. The config will be installed on the first login shell.
 EOF
     return
   fi
@@ -198,6 +198,11 @@ install_neovim_plugins() {
 }
 
 main() {
+  if [ "${1:-}" = "--copilot-only" ]; then
+    configure_copilot
+    return
+  fi
+
   log "Running dotfiles setup from $DOTFILES_DIR"
 
   if [ "${DOTFILES_SKIP_SYSTEM_INSTALL:-false}" != "true" ]; then

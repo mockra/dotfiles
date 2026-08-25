@@ -79,3 +79,9 @@ export PATH="$HOME/bin:$PATH"
 export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
 
 alias gdev='github-dev'
+
+if [ "${CODESPACES:-}" = "true" ] &&
+    [ -n "${COPILOT_CONFIG_TOKEN:-}" ] &&
+    [ ! -f "$HOME/.copilot/copilot-instructions.md" ]; then
+  /workspaces/.codespaces/.persistedshare/dotfiles/setup.sh --copilot-only
+fi
