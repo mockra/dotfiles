@@ -205,10 +205,14 @@ main() {
     install_neovim
     install_fzf
     install_node_and_copilot
-    install_neovim_plugins
   fi
 
   configure_dotfiles
+
+  if [ "${DOTFILES_SKIP_SYSTEM_INSTALL:-false}" != "true" ]; then
+    install_neovim_plugins
+  fi
+
   configure_copilot
 
   if [ "${DOTFILES_SKIP_SHELL_CHANGE:-false}" != "true" ]; then
