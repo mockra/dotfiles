@@ -25,15 +25,10 @@ Select `mockra/dotfiles` under the
 [Codespaces dotfiles settings](https://github.com/settings/codespaces). New
 Codespaces run `setup.sh` automatically.
 
-Copilot configuration is loaded from the private
-[`mockra/copilot-config`](https://github.com/mockra/copilot-config) repository.
-Create a fine-grained personal access token with read-only Contents access to
-that repository, then add it as a Codespaces secret named
+Copilot configuration and personal scripts are loaded from the private
+[`mockra/copilot-config`](https://github.com/mockra/copilot-config) and
+[`mockra/dotfile-scripts`](https://github.com/mockra/dotfile-scripts)
+repositories. Create a fine-grained personal access token with read-only
+Contents access to both repositories, then add it as a Codespaces secret named
 `COPILOT_CONFIG_TOKEN`. Grant the secret access to every repository where the
 configuration should be installed.
-
-The setup log is written to `~/dotfiles_install.log`. To rerun setup:
-
-```sh
-/workspaces/.codespaces/.persistedshare/dotfiles/setup.sh
-```

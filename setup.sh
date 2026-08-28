@@ -6,6 +6,7 @@ exec > >(tee -ia "$HOME/dotfiles_install.log") 2>&1
 
 DOTFILES_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 COPILOT_CONFIG_REPO="${COPILOT_CONFIG_REPO:-mockra/copilot-config}"
+DOTFILE_SCRIPTS_REPO="${DOTFILE_SCRIPTS_REPO:-mockra/dotfile-scripts}"
 
 trap 'echo "==> Dotfiles setup failed at line $LINENO. See $HOME/dotfiles_install.log."' ERR
 
@@ -119,25 +120,29 @@ configure_dotfiles() {
   done
 }
 
-copilot_config_token() {
-  if [ -n "${COPILOT_CONFIG_TOKEN:-}" ]; then
-    printf '%s' "$COPILOT_CONFIG_TOKEN"
+private_repo_token() {
+  local repo="$1"
+  local token
+
+  command -v gh >/dev/null 2>&1 || return
+
+  token="${COPILOT_CONFIG_TOKEN:-}"
+  if [ -n "$token" ] &&
+      GH_TOKEN="$token" gh api "repos/$repo" >/dev/null 2>&1; then
+    printf '%s' "$token"
     return
   fi
 
-  if command -v gh >/dev/null 2>&1; then
-    local token
-    token="$(gh auth token 2>/dev/null || true)"
-    if [ -n "$token" ] &&
-        GH_TOKEN="$token" gh api "repos/$COPILOT_CONFIG_REPO" >/dev/null 2>&1; then
-      printf '%s' "$token"
-    fi
+  token="$(gh auth token 2>/dev/null || true)"
+  if [ -n "$token" ] &&
+      GH_TOKEN="$token" gh api "repos/$repo" >/dev/null 2>&1; then
+    printf '%s' "$token"
   fi
 }
 
 configure_copilot() {
   local token
-  token="$(copilot_config_token)"
+  token="$(private_repo_token "$COPILOT_CONFIG_REPO")"
 
   if [ -z "$token" ]; then
     cat >&2 <<EOF
@@ -189,6 +194,50 @@ EOF
   log "Installed Copilot instructions, settings, MCP config, and skills"
 }
 
+configure_dotfile_scripts() {
+  local token
+  token="$(private_repo_token "$DOTFILE_SCRIPTS_REPO")"
+
+  if [ -z "$token" ]; then
+    cat >&2 <<EOF
+==> Private scripts were not installed.
+    Grant COPILOT_CONFIG_TOKEN read-only Contents access to
+    https://github.com/$DOTFILE_SCRIPTS_REPO, then rerun setup.
+EOF
+    return
+  fi
+
+  local scripts_dir="$HOME/bin"
+  local basic_auth
+  basic_auth="$(printf 'x-access-token:%s' "$token" | base64 | tr -d '\n')"
+
+  if [ -d "$scripts_dir/.git" ]; then
+    local origin
+    origin="$(git -C "$scripts_dir" remote get-url origin)"
+    case "$origin" in
+      "https://github.com/${DOTFILE_SCRIPTS_REPO}" | \
+        "https://github.com/${DOTFILE_SCRIPTS_REPO}.git" | \
+        "git@github.com:${DOTFILE_SCRIPTS_REPO}.git")
+        ;;
+      *)
+        echo "==> Private scripts were not updated: $scripts_dir uses unexpected origin $origin" >&2
+        return
+        ;;
+    esac
+
+    log "Updating scripts from $DOTFILE_SCRIPTS_REPO"
+    git -c "http.extraHeader=Authorization: Basic ${basic_auth}" \
+      -C "$scripts_dir" pull --ff-only
+  elif [ -e "$scripts_dir" ]; then
+    echo "==> Private scripts were not installed: $scripts_dir already exists and is not a git checkout" >&2
+    return
+  else
+    log "Cloning scripts from $DOTFILE_SCRIPTS_REPO"
+    git -c "http.extraHeader=Authorization: Basic ${basic_auth}" \
+      clone --quiet "https://github.com/${DOTFILE_SCRIPTS_REPO}.git" "$scripts_dir"
+  fi
+}
+
 install_neovim_plugins() {
   log "Installing Neovim plugins"
   curl -fsSLo "${XDG_DATA_HOME:-$HOME/.local/share}/nvim/site/autoload/plug.vim" \
@@ -213,6 +262,7 @@ main() {
   fi
 
   configure_dotfiles
+  configure_dotfile_scripts
 
   if [ "${DOTFILES_SKIP_SYSTEM_INSTALL:-false}" != "true" ]; then
     install_neovim_plugins
