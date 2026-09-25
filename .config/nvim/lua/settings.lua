@@ -9,14 +9,17 @@ vim.g["test#javascript#runner"] = "jest"
 vim.g.ruby_indent_block_style = "do"
 vim.g.ruby_indent_assignment_style = "variable"
 
-vim.g.tokyonight_style = "moon"
-vim.g.tokyonight_enable_italic = 1
-vim.g.tmuxline_preset = "nightly_fox"
-
-vim.g.lightline = { colorscheme = "tokyonight" }
+vim.opt.background = "light"
+vim.g.lightline = { colorscheme = "rosepine_dawn" }
 
 vim.cmd([[set nocompatible]])
-vim.cmd([[colorscheme tokyonight-moon]])
+require("rose-pine").setup({
+  variant = "dawn",
+  styles = {
+    italic = true,
+  },
+})
+vim.cmd([[colorscheme rose-pine-dawn]])
 vim.cmd([[set termguicolors]])
 vim.cmd([[set shell=bash]])
 vim.cmd([[set encoding=utf-8]])
@@ -55,13 +58,13 @@ vim.cmd("set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*/node_modules/*")
 vim.cmd("set inccommand=split")
 
 vim.env.FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
--- Tokyonight-moon colors
+-- Rosé Pine Dawn colors
 vim.env.FZF_DEFAULT_OPTS = [[
 --border
---color=fg:#c8d3f5,bg:#222436,hl:#ff966c
---color=fg+:#c8d3f5,bg+:#2f334d,hl+:#ff966c
---color=info:#82aaff,prompt:#86e1fc,pointer:#86e1fc
---color=marker:#c3e88d,spinner:#c3e88d,header:#c3e88d
+--color=fg:#464261,bg:#faf4ed,hl:#b4637a
+--color=fg+:#464261,bg+:#f2e9e1,hl+:#b4637a
+--color=info:#286983,prompt:#907aa9,pointer:#907aa9
+--color=marker:#56949f,spinner:#56949f,header:#56949f
 ]]
 
 vim.g.fzf_colors = {

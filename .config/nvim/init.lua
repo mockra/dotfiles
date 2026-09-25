@@ -182,7 +182,13 @@ require("lazy").setup({
   -- Themeing
   "itchyny/lightline.vim",
   "edkolev/tmuxline.vim",
-  { "folke/tokyonight.nvim", branch = "main" },
+  {
+    "rose-pine/neovim",
+    name = "rose-pine",
+    dependencies = {
+      { "rose-pine/vim", name = "rose-pine-vim" },
+    },
+  },
 
   -- Testing
   "janko-m/vim-test",

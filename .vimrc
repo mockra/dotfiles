@@ -41,7 +41,7 @@ Plug 'airblade/vim-gitgutter'
 " Themes
 Plug 'itchyny/lightline.vim'
 Plug 'edkolev/tmuxline.vim'
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'rose-pine/vim'
 
 " Testiing
 Plug 'janko-m/vim-test'
@@ -70,16 +70,14 @@ let test#strategy = "vimux"
 let test#ruby#rspec#executable = 'script/test'
 
 set termguicolors
-let g:tokyonight_style = 'moon'
-let g:tokyonight_enable_italic = 1
+set background=light
 let g:lightline = {
-      \ 'colorscheme': 'tokyonight',
+      \ 'colorscheme': 'rosepine_dawn',
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
       \ },
       \ }
-let g:tmuxline_preset = 'nightly_fox'
-colorscheme tokyonight-moon
+colorscheme rosepine_dawn
 
 function! LightlineFilename()
   let root = fnamemodify(get(b:, 'git_dir'), ':h')
