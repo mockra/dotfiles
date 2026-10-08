@@ -17,7 +17,7 @@ adjust-cell-width = -4%
 font-thicken = true
 
 # Window style
-macos-titlebar-style = tabs
+macos-titlebar-style = transparent
 window-theme = system
 window-colorspace = display-p3
 
