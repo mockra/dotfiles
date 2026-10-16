@@ -1,5 +1,0 @@
-# finnest config — see https://github.com/mockra/finnest
-
-root = "~/finnests"
-auto-commit = true
-auto-push = true
