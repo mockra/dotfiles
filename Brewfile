@@ -11,6 +11,9 @@ brew "ripgrep"
 brew "fzf"
 brew "the_silver_searcher"
 
+# Markdown notes
+brew "glow"
+
 # Version managers
 brew "mise"
 brew "rbenv"

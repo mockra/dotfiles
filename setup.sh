@@ -106,7 +106,7 @@ configure_dotfiles() {
   link_file "$DOTFILES_DIR/.agignore" "$HOME/.agignore"
   link_file "$DOTFILES_DIR/.ignore" "$HOME/.ignore"
 
-  mkdir -p "$HOME/.vsnip" "$HOME/.config/nvim"
+  mkdir -p "$HOME/.vsnip" "$HOME/.config/nvim" "$HOME/notes/inbox"
 
   local source
   for source in "$DOTFILES_DIR"/.vsnip/*; do

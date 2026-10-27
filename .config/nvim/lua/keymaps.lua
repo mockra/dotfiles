@@ -36,10 +36,13 @@ nnoremap("gr", ":History<CR>", "silent")
 map("<Leader>z", ":VimuxZoomRunner<CR>")
 map("<leader>n", ":Rename ")
 
-map("<leader>ny", ":MockNotesYank<CR>")
-map("<leader>ns", ":MockNotesSave<CR>")
-map("<leader>nn", ":MockNotesNew<CR>")
-map("<leader>nf", ":MockNotesFzfFind<CR>")
+vim.keymap.set("n", "<leader>nf", function()
+  local notes_dir = vim.fn.expand("~/notes")
+  vim.fn.mkdir(notes_dir, "p")
+  vim.fn["fzf#vim#files"](notes_dir, { source = "rg --files --no-ignore -g '*.md'" })
+end, { desc = "Find Copilot notes" })
+
+vim.keymap.set("n", "<leader>np", "<cmd>RenderMarkdown buf_toggle<cr>", { desc = "Toggle Markdown rendering" })
 
 noremap("<Leader>gi", ":GoImplements<CR>")
 noremap("<Leader>gr", ":GoReferrers<CR>")

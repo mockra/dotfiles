@@ -28,6 +28,17 @@ require("lazy").setup({
   "junegunn/fzf",
   "junegunn/fzf.vim",
 
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    ft = "markdown",
+    cmd = "RenderMarkdown",
+    opts = {
+      sign = { enabled = false },
+      pipe_table = { preset = "round", cell = "trimmed" },
+      latex = { enabled = false },
+    },
+  },
+
   -- Personal Plugins
   "mockra/commit-mates",
 
