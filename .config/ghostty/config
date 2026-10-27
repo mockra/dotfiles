@@ -9,7 +9,7 @@ working-directory = home
 # Other UI Customization
 cursor-style = block
 cursor-style-blink = false
-scrollback-limit = 100000000
+scrollback-limit-bytes = 100000000
 
 # Fonts and colors
 adjust-underline-position = 1
@@ -17,15 +17,17 @@ adjust-cell-width = -4%
 font-thicken = true
 
 # Window style
-macos-titlebar-style = transparent
+macos-titlebar-style = tabs
 window-theme = system
 window-colorspace = display-p3
+drag-handle = never
 
 # Clipboard, mouse, keyboard
 clipboard-read = allow
 clipboard-write = allow
+copy-on-select = primary
 mouse-hide-while-typing = true
 mouse-shift-capture = false
 
 # Necessary for zsh to respect cursor style
-shell-integration-features = no-cursor
+shell-integration-features = no-cursor,ssh-env,ssh-terminfo
