@@ -70,14 +70,14 @@ let test#strategy = "vimux"
 let test#ruby#rspec#executable = 'script/test'
 
 set termguicolors
-set background=light
+set background=dark
 let g:lightline = {
-      \ 'colorscheme': 'rosepine_dawn',
+      \ 'colorscheme': 'rosepine_moon',
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
       \ },
       \ }
-colorscheme rosepine_dawn
+colorscheme rosepine_moon
 
 function! LightlineFilename()
   let root = fnamemodify(get(b:, 'git_dir'), ':h')

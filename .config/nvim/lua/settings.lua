@@ -9,17 +9,17 @@ vim.g["test#javascript#runner"] = "jest"
 vim.g.ruby_indent_block_style = "do"
 vim.g.ruby_indent_assignment_style = "variable"
 
-vim.opt.background = "light"
-vim.g.lightline = { colorscheme = "rosepine_dawn" }
+vim.opt.background = "dark"
+vim.g.lightline = { colorscheme = "rosepine_moon" }
 
 vim.cmd([[set nocompatible]])
 require("rose-pine").setup({
-  variant = "dawn",
+  variant = "moon",
   styles = {
     italic = true,
   },
 })
-vim.cmd([[colorscheme rose-pine-dawn]])
+vim.cmd([[colorscheme rose-pine-moon]])
 vim.cmd([[set termguicolors]])
 vim.cmd([[set shell=bash]])
 vim.cmd([[set encoding=utf-8]])
@@ -58,13 +58,13 @@ vim.cmd("set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*/node_modules/*")
 vim.cmd("set inccommand=split")
 
 vim.env.FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
--- Rosé Pine Dawn colors
+-- Rosé Pine Moon colors
 vim.env.FZF_DEFAULT_OPTS = [[
 --border
---color=fg:#464261,bg:#faf4ed,hl:#b4637a
---color=fg+:#464261,bg+:#f2e9e1,hl+:#b4637a
---color=info:#286983,prompt:#907aa9,pointer:#907aa9
---color=marker:#56949f,spinner:#56949f,header:#56949f
+--color=fg:#e0def4,bg:#232136,hl:#eb6f92
+--color=fg+:#e0def4,bg+:#2a273f,hl+:#eb6f92
+--color=info:#3e8fb0,prompt:#c4a7e7,pointer:#c4a7e7
+--color=marker:#9ccfd8,spinner:#9ccfd8,header:#9ccfd8
 ]]
 
 vim.g.fzf_colors = {
