@@ -22,3 +22,6 @@ start-with = "shell"
 
 [project.prs]
 command = "oponn"
+
+[project.todo]
+command = "nvim ~/todo.md"
